@@ -1,0 +1,67 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="" disabled=""> Have you followed the guidelines in our <a href="https://github.com/Homebrew/brew/blob/master/CONTRIBUTING.md">Contributing</a> document?</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="" disabled=""> Have you checked to ensure there aren't other open <a href="https://github.com/Homebrew/brew/pulls">Pull Requests</a> for the same change?</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="" disabled=""> Have you added an explanation of what your changes do and why you'd like us to include them?</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="" disabled=""> Have you written new tests for your changes? <a href="https://github.com/Homebrew/homebrew/pull/49031">Here's an example</a>.</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="" disabled=""> Have you successfully run <code>brew tests</code> with your changes locally?</li>
+</ul>
+<hr>
+<p>Addresses an issue raised at <a href="https://github.com/caskroom/homebrew-cask/issues/30968" class="issue-link js-issue-link" data-url="https://github.com/caskroom/homebrew-cask/issues/30968" data-id="214589791" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">caskroom/homebrew-cask#30968</a> where it was unclear which warnings are about the installation and which were about the uninstallation during a reinstall. Adds tests for the output of the install / uninstall / reinstall commands. Fixes a related test that outputs when it should not.</p>
+
+<hr>
+
+<h4>You can view, comment on, or merge this pull request online at:</h4>
+<p>&nbsp;&nbsp;<a href="https://github.com/Homebrew/brew/pull/2362">https://github.com/Homebrew/brew/pull/2362</a></p>
+
+<h4>Commit Summary</h4>
+<ul>
+  <li>Refactor brew cask reinstall</li>
+  <li>Show messages when (un)installing Casks</li>
+  <li>Hide output from brew cask uninstall test</li>
+</ul>
+
+<h4>File Changes</h4>
+<ul>
+  <li>
+    <strong>M</strong>
+    <a href="https://github.com/Homebrew/brew/pull/2362/files#diff-0">Library/Homebrew/cask/lib/hbc/cli/reinstall.rb</a>
+    (29)
+  </li>
+  <li>
+    <strong>M</strong>
+    <a href="https://github.com/Homebrew/brew/pull/2362/files#diff-1">Library/Homebrew/cask/lib/hbc/installer.rb</a>
+    (23)
+  </li>
+  <li>
+    <strong>M</strong>
+    <a href="https://github.com/Homebrew/brew/pull/2362/files#diff-2">Library/Homebrew/test/cask/cli/install_spec.rb</a>
+    (14)
+  </li>
+  <li>
+    <strong>M</strong>
+    <a href="https://github.com/Homebrew/brew/pull/2362/files#diff-3">Library/Homebrew/test/cask/cli/reinstall_spec.rb</a>
+    (23)
+  </li>
+  <li>
+    <strong>M</strong>
+    <a href="https://github.com/Homebrew/brew/pull/2362/files#diff-4">Library/Homebrew/test/cask/cli/uninstall_spec.rb</a>
+    (21)
+  </li>
+</ul>
+
+<h4>Patch Links:</h4>
+<ul>
+  <li><a href="https://github.com/Homebrew/brew/pull/2362.patch">https://github.com/Homebrew/brew/pull/2362.patch</a></li>
+  <li><a href="https://github.com/Homebrew/brew/pull/2362.diff">https://github.com/Homebrew/brew/pull/2362.diff</a></li>
+</ul>
+
+<p style="font-size:small;-webkit-text-size-adjust:none;color:#666;">—<br>You are receiving this because you are subscribed to this thread.<br>Reply to this email directly, <a href="https://github.com/Homebrew/brew/pull/2362">view it on GitHub</a>, or <a href="https://github.com/notifications/unsubscribe-auth/AZR1RwCtxp5O8SQT-ra5QbrojyEXEXauks5rnHKkgaJpZM4Mhlel">mute the thread</a>.<img alt="" height="1" src="https://github.com/notifications/beacon/AZR1R72L_F0ZxlhNAnrp64cL1gUeu47Sks5rnHKkgaJpZM4Mhlel.gif" width="1"></p>
+<div itemscope="" itemtype="http://schema.org/EmailMessage">
+<div itemprop="action" itemscope="" itemtype="http://schema.org/ViewAction">
+  <link itemprop="url" href="https://github.com/Homebrew/brew/pull/2362"><!-- </link> -->
+  <meta itemprop="name" content="View Pull Request"><!-- </meta> -->
+</div>
+<meta itemprop="description" content="View this Pull Request on GitHub"><!-- </meta> -->
+</div>
+
+<script type="application/json" data-scope="inboxmarkup">{"api_version":"1.0","publisher":{"api_key":"05dde50f1d1a384dd78767c55493e4bb","name":"GitHub"},"entity":{"external_key":"github/Homebrew/brew","title":"Homebrew/brew","subtitle":"GitHub repository","main_image_url":"https://cloud.githubusercontent.com/assets/143418/17495839/a5054eac-5d88-11e6-95fc-7290892c7bb5.png","avatar_image_url":"https://cloud.githubusercontent.com/assets/143418/15842166/7c72db34-2c0b-11e6-9aed-b52498112777.png","action":{"name":"Open in GitHub","url":"https://github.com/Homebrew/brew"}},"updates":{"snippets":[{"icon":"DESCRIPTION","message":"Install uninstall messages (#2362)"}],"action":{"name":"View Pull Request","url":"https://github.com/Homebrew/brew/pull/2362"}}}</script>

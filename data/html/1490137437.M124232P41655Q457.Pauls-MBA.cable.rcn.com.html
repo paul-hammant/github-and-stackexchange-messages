@@ -1,0 +1,570 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Exchange</title>
+    <style type="text/css">		
+        #outlook a {padding:0;}
+        body{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; }
+        .ExternalClass {width:100%;}
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 130%;}
+        #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important; background-color:#f0fbff; font-family: Arial, Helvetica, sans-serif;}
+
+        img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+        a img {border:none;}
+        .image_fix {display:block;}
+
+        p {margin: 1em 0;}
+        p.footer { text-align: center; color: #818386; }
+        p.item-excerpt {
+            /*font-size:	13px;*/
+            color: #3d3d3d;
+            margin-top: 5px;
+        }
+        p.item-link {
+            margin: 5px 0 0 0;
+        }
+        span.item-label {
+            color: #aaaaaa;
+            /*font-size: 13px;*/
+        }
+
+        h1, h2, h3, h4, h5, h6 {color: black }
+
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: blue}
+
+        h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+            color: red;
+        }
+
+        h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+            color: purple;
+        }
+
+        table td {border-collapse: collapse;}
+
+        table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+
+        .emailfooter {
+            width: 600px;
+        }
+
+        .emailfooter td {
+            padding-top: 30px;
+        }
+
+        a {color: #0077cc; text-decoration:none;}
+        a:link { color: #0077cc; }
+        a:visited { color: #0077cc; }
+        a:hover { color: #3da5ef; }
+
+        .header-text {
+            /*font-size: 14px;*/
+        }
+
+        #emailcontainer {
+            width: 600px;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            background: #ffffff;
+        }
+		
+        @media only screen and (max-device-width: 480px),
+                only screen and (max-width: 480px) 
+            {
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: black;
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+            #emailcontainer	{
+                width: 90%;
+            }
+            .emailfooter {
+                width: 90%;
+            }
+
+            .header-text {
+                font-size: 100%;
+                line-height: 1.2;
+            } 
+
+            .item-link {
+                font-size: 100%;
+                line-height: 22px;
+            }
+
+            .item-excerpt {
+                line-height: 18px;
+            }           
+        }
+
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px),
+                only screen and (min-width: 768px) and (max-width: 1024px)
+        {
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: blue; /* or whatever your want */
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+            #emailcontainer	{
+                width: 90%;
+            }
+            .emailfooter {
+                width: 90%;
+            }
+
+            .header-text {
+                font-size: 100%;
+                line-height: 1.2;
+            }
+
+            .item-link {
+                font-size: 100%;
+                line-height: 22px;
+            }
+
+            .item-excerpt {
+                line-height: 18px;
+            } 
+        }
+    </style>
+</head>
+<body style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0; line-height: 1.2;">
+    <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 0;padding: 0;background-color: #f0fbff;font-family: Arial, Helvetica, sans-serif;width: 100% !important; height: 100% !important; ">
+        <tr>
+            <td align="center" style="padding-bottom: 40px;border-collapse: collapse;">
+                <!-- logo table -->
+                <table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                    <tr>
+                        <td align="center" style="padding-top: 30px;padding-bottom: 30px;text-align: center;border-collapse: collapse;">
+                            <img src="https://cdn.sstatic.net/stackexchange/img/se-logo.png" alt="Stack Exchange" width="180px" height="43px" style="width:180px; height: 43px; margin-left: auto; margin-right: auto; outline: none; text-decoration: none;-ms-interpolation-mode: bicubic;">
+                        </td>
+                    </tr>
+                </table>
+                
+                <div style="max-width: 600px; border-radius: 3px;">
+                <!-- email body table -->
+                <table id="emailcontainer" cellpadding="0" cellspacing="0" border="0" align="center" style="max-width: 600px; border: 1px solid #eee; border-radius: 3px; background: #ffffff">
+                    <tr>
+<td valign="top" align="center" style="background-color: #2f3552; color: #90d9f5">
+
+<table width="90%">
+    <tbody>
+        <tr>
+            <td style="padding: 15px 0; padding-right: 5px;" valign="middle" align="left">
+                <img height="48" width="48" style="height: 48px; width: 48px;" src="https://sstatic.net/img/icon-rss.png">
+            </td>
+            <td align="left" valign="middle" style="padding: 15px 0; color: white; text-align: left;">
+                <span class="header-text" style="display: block;">
+                    The following 11 items were added to your Stack Exchange <a style="color: #90d9f5; text-decoration: none;" href="https://stackexchange.com/filters/279357/secondfilter">&quot;SecondFilter&quot; feed</a>.
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</td>
+</tr>
+
+<tr>
+<td align="center" style="padding-top: 15px; padding-bottom: 25px;">
+
+
+<table width="90%">
+    <tbody>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/unix/img/apple-touch-icon.png" alt="Unix &amp; Linux Stack Exchange" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://unix.stackexchange.com/questions/352636/remove-all-class-files-form-folders-in-bash" style="color: #0077cc; text-decoration: none;">Remove all .class files form folders in bash</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I'm making a bash file to remove all .class files that java generates inside the src folder and it's subfolders. The structure is:
+
+project
+   src
+      /utils
+         utils.class
+      /game
+         ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://unix.stackexchange.com/tags/bash" style="color: #0077cc; text-decoration: none;">bash</a>,                                            <a href="http://unix.stackexchange.com/tags/find" style="color: #0077cc; text-decoration: none;">find</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:59:34Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:59</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42908235/how-to-efficiently-redirect-multiple-country-urls-to-mobile-sites-in-chrome-exte" style="color: #0077cc; text-decoration: none;">How to efficiently redirect multiple country URLs to mobile sites in Chrome extension?</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I have the following working code:
+
+else if (tabs[i].url.indexOf(&quot;www.example.de&quot;) != -1) {
+    chrome.tabs.update(tabs[i].id, {url: &quot;https://m.example.de/&quot;});
+}
+The code needs to include all other  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/javascript" style="color: #0077cc; text-decoration: none;">javascript</a>,                                            <a href="http://stackoverflow.com/tags/regex" style="color: #0077cc; text-decoration: none;">regex</a>,                                            <a href="http://stackoverflow.com/tags/google-chrome-extension" style="color: #0077cc; text-decoration: none;">google-chrome-extension</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:55:54Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:55</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42908179/escape-dots-from-string-but-leave-words-with-dots-next-to-some-keys" style="color: #0077cc; text-decoration: none;">Escape dots from string but leave words with dots next to some keys</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        How to match when occurs .one or .zero together with string before to first dot before and any string except dot, regex like \b(\w&#43;) returns any string without dot, but I need to group it like ['app',  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/javascript" style="color: #0077cc; text-decoration: none;">javascript</a>,                                            <a href="http://stackoverflow.com/tags/regex" style="color: #0077cc; text-decoration: none;">regex</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:53:33Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:53</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42908103/bash-spaces-in-line-getting-broken-with-array-with-grep" style="color: #0077cc; text-decoration: none;">bash : spaces in line getting broken with array with grep</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I am using array to tackle with spaces in line of my file. But when i am using grep to filter with value of array it is breaking because of spaces.
+
+For example my line is as per below
+
+ ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/arrays" style="color: #0077cc; text-decoration: none;">arrays</a>,                                            <a href="http://stackoverflow.com/tags/bash" style="color: #0077cc; text-decoration: none;">bash</a>,                                            <a href="http://stackoverflow.com/tags/grep" style="color: #0077cc; text-decoration: none;">grep</a>,                                            <a href="http://stackoverflow.com/tags/space" style="color: #0077cc; text-decoration: none;">space</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:49:41Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:49</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42908082/ruby-remote-sdk-configuration-with-intellij-broken-workarround" style="color: #0077cc; text-decoration: none;">Ruby Remote SDK configuration with Intellij broken - workarround?</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        Cause
+
+Since the latest IntelliJ Ultimate 2016.2&#43;/RubyMine update the remote ruby SDK does not longer work. The symptom is, that configuring a remote ruby SDK works, but it will no longer fetch the  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/ruby-on-rails" style="color: #0077cc; text-decoration: none;">ruby-on-rails</a>,                                            <a href="http://stackoverflow.com/tags/ruby" style="color: #0077cc; text-decoration: none;">ruby</a>,                                            <a href="http://stackoverflow.com/tags/docker" style="color: #0077cc; text-decoration: none;">docker</a>,                                            <a href="http://stackoverflow.com/tags/intellij-idea" style="color: #0077cc; text-decoration: none;">intellij-idea</a>,                                            <a href="http://stackoverflow.com/tags/rubymine" style="color: #0077cc; text-decoration: none;">rubymine</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:48:53Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:48</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907973/cpp-rest-sdk-http-listener-throws-exception-in-nano-server-in-a-docker-containe" style="color: #0077cc; text-decoration: none;">CPP Rest SDK http_listener throws exception in nano server (in a Docker container)</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I have a server app built witn Cpp Rest SDK which runs fine in a windowsserver code Docker container (10GB!). Now I'm trying to make it work in a nano server container to save space (1GB &quot;only&quot;). The  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/windows" style="color: #0077cc; text-decoration: none;">windows</a>,                                            <a href="http://stackoverflow.com/tags/docker" style="color: #0077cc; text-decoration: none;">docker</a>,                                            <a href="http://stackoverflow.com/tags/nano-server" style="color: #0077cc; text-decoration: none;">nano-server</a>,                                            <a href="http://stackoverflow.com/tags/cpprest-sdk" style="color: #0077cc; text-decoration: none;">cpprest-sdk</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:44:21Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:44</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/unix/img/apple-touch-icon.png" alt="Unix &amp; Linux Stack Exchange" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://unix.stackexchange.com/questions/352631/why-grep-shows-bash-event-not-found" style="color: #0077cc; text-decoration: none;">why grep &quot;!&quot; shows &quot;bash: !: event not found&quot;?</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        If I run
+
+grep &quot;!&quot; test.txt
+it will show error
+  bash: !: event not found
+Well, I know I actually should use grep '!'. But how to understand the above error?
+
+I know ! is bash special character.  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://unix.stackexchange.com/tags/bash" style="color: #0077cc; text-decoration: none;">bash</a>,                                            <a href="http://unix.stackexchange.com/tags/grep" style="color: #0077cc; text-decoration: none;">grep</a>,                                            <a href="http://unix.stackexchange.com/tags/special-characters" style="color: #0077cc; text-decoration: none;">special-characters</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:44:04Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:44</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907903/allow-redeploy-for-latest-docker-tag-in-nexus-oss" style="color: #0077cc; text-decoration: none;">Allow redeploy for &quot;latest&quot; docker tag in Nexus OSS</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I'm using nexus to host both maven and docker artifacts. For the docker production artifacts I'd like to turn on &quot;disable redeploy&quot; to ensure the image can never change on the nexus server once it is  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/docker" style="color: #0077cc; text-decoration: none;">docker</a>,                                            <a href="http://stackoverflow.com/tags/nexus" style="color: #0077cc; text-decoration: none;">nexus</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:41:12Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:41</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/unix/img/apple-touch-icon.png" alt="Unix &amp; Linux Stack Exchange" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://unix.stackexchange.com/questions/352630/posix-character-sets-difference-between-blank-and-space" style="color: #0077cc; text-decoration: none;">Posix Character Sets difference between [[:blank:]] and [[:space:]]?</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        On this website it says:
+
+[[:blank:]]     space and tab characters
+[[:space:]]     whitespace characters
+What's the difference between space and tab characters and whitespace characters? To me, they  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://unix.stackexchange.com/tags/sed" style="color: #0077cc; text-decoration: none;">sed</a>,                                            <a href="http://unix.stackexchange.com/tags/posix" style="color: #0077cc; text-decoration: none;">posix</a>,                                            <a href="http://unix.stackexchange.com/tags/whitespace" style="color: #0077cc; text-decoration: none;">whitespace</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:40:37Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:40</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907807/creating-alias-in-linux-to-a-file-or-directory-whose-path-changes-with-time" style="color: #0077cc; text-decoration: none;">Creating alias in Linux to a file or directory whose path changes with time</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I want to create an alias to a specific log file in Linux. The only issue is the path to the file has a directory with time stamp. Every time this file is created (every time I run a script), its path  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/linux" style="color: #0077cc; text-decoration: none;">linux</a>,                                            <a href="http://stackoverflow.com/tags/bash" style="color: #0077cc; text-decoration: none;">bash</a>,                                            <a href="http://stackoverflow.com/tags/alias" style="color: #0077cc; text-decoration: none;">alias</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:37:01Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:37</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907801/context-aware-regular-expression" style="color: #0077cc; text-decoration: none;">Context-aware regular expression</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I have a long Latex document and have been requested to change every appearance of the math symbol upper case A with lower case a.
+
+The only problem is that this symbol is repeated so many times (I  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/regex" style="color: #0077cc; text-decoration: none;">regex</a>,                                            <a href="http://stackoverflow.com/tags/bash" style="color: #0077cc; text-decoration: none;">bash</a>,                                            <a href="http://stackoverflow.com/tags/grep" style="color: #0077cc; text-decoration: none;">grep</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:36:49Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:36</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+        <tr style="padding: 15px 0;">
+            <td></td>
+            <td valign="top" align="left">
+
+                <p style="color: #444; font-size: 85%;">
+                    <a href="https://stackexchange.com/email/unsubscribe-filter/701415/2139836355?code=PLtkda0oEKf5m2NH%2f4imJ98ezlIJrykH5yemDmpogVI%3d" style="color: #0077cc; text-decoration: none;">Unsubscribe from this filter</a> or change your email preferences by visiting
+
+                        your <a href="https://stackexchange.com/users/10489699?tab=subscriptions" style="color: #0077cc; text-decoration: none;">filter subscriptions page on stackexchange.com</a>.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+</td>
+</tr>
+
+                </table>
+                </div>
+                
+                <div style="text-align: center; max-width: 600px;">
+                    <table class="emailfooter" style="margin-left: auto; margin-right: auto; font-size: 95%;">
+                        <tr>
+                            <td>
+                                <p><span style="color:#999; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;"> 
+    Questions? Comments? Let us know on our <a href="https://meta.stackexchange.com">feedback site</a>.
+            If you no longer want to receive mail from Stack Exchange, <a href="https://stackexchange.com/email/manage/1078893/4585631041ce7c205ab6c1caaf0a41e5ee0c444085d2cd145fe6c9bc580c6804">unsubscribe</a> from all stackexchange.com emails.
+</span></p>
+
+<p><span style="color:#999; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;">Stack Exchange Inc. 110 William Street, 28th floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span></span></p>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!-- End of wrapper table -->
+</body>
+</html>

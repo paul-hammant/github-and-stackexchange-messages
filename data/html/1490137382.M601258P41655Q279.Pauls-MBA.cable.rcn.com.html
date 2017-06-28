@@ -1,0 +1,60 @@
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><p=
+>Ok updated to 4.0.0-rc.5 and get a more verbose message but basically the =
+same.</p>
+<pre><code>Error: Unexpected value 'CoolComponent in /path/to/project/node_=
+modules/angular2-component-module/lib/cool.component.d.ts' declared by the =
+module 'AppModule in /path/to/project/app/app.module.ts'. Please add a @Pip=
+e/@Directive/@Component annotation.
+</code></pre>
+<p>Is it because <code>ngx-i18n</code> only look at .d.ts file <a href=3D"h=
+ttps://github.com/reynardmh/angular2-component-module/blob/master/lib/cool.=
+component.d.ts">https://github.com/reynardmh/angular2-component-module/blob=
+/master/lib/cool.component.d.ts</a> which does not have component annotatio=
+n.</p>
+<p>instead of the compiled .js<br>
+<a href=3D"https://github.com/reynardmh/angular2-component-module/blob/mast=
+er/lib/cool.component.js">https://github.com/reynardmh/angular2-component-m=
+odule/blob/master/lib/cool.component.js</a></p>
+<p>Because I can run the project just fine, this error only happens when ru=
+nning <code>ngx-i18n</code></p>
+
+<p style=3D"font-size:small;-webkit-text-size-adjust:none;color:#666;">=E2=
+=80=94<br>You are receiving this because you are subscribed to this thread.=
+<br>Reply to this email directly, <a href=3D"https://github.com/angular/ang=
+ular/issues/13186#issuecomment-287633786">view it on GitHub</a>, or <a href=
+=3D"https://github.com/notifications/unsubscribe-auth/AZR1R1fM8dOWk3s5cpTuc=
+jDpjjIXDrnyks5rnWqHgaJpZM4LB1wN">mute the thread</a>.<img alt=3D"" height=
+=3D"1" src=3D"https://github.com/notifications/beacon/AZR1R9sX70KF4NChgNLXe=
+yZrbinDxHshks5rnWqHgaJpZM4LB1wN.gif" width=3D"1"></p>
+<div itemscope=3D"" itemtype=3D"http://schema.org/EmailMessage">
+<div itemprop=3D"action" itemscope=3D"" itemtype=3D"http://schema.org/ViewA=
+ction">
+  <link itemprop=3D"url" href=3D"https://github.com/angular/angular/issues/=
+13186#issuecomment-287633786"><!-- </link> -->
+  <meta itemprop=3D"name" content=3D"View Issue"><!-- </meta> -->
+</div>
+<meta itemprop=3D"description" content=3D"View this Issue on GitHub"><!-- <=
+/meta> -->
+</div>
+
+<script type=3D"application/json" data-scope=3D"inboxmarkup">{"api_version"=
+:"1.0","publisher":{"api_key":"05dde50f1d1a384dd78767c55493e4bb","name":"Gi=
+tHub"},"entity":{"external_key":"github/angular/angular","title":"angular/a=
+ngular","subtitle":"GitHub repository","main_image_url":"https://cloud.gith=
+ubusercontent.com/assets/143418/17495839/a5054eac-5d88-11e6-95fc-7290892c7b=
+b5.png","avatar_image_url":"https://cloud.githubusercontent.com/assets/1434=
+18/15842166/7c72db34-2c0b-11e6-9aed-b52498112777.png","action":{"name":"Ope=
+n in GitHub","url":"https://github.com/angular/angular"}},"updates":{"snipp=
+ets":[{"icon":"PERSON","message":"@reynardmh in #13186: Ok updated to 4.0.0=
+-rc.5 and get a more verbose message but basically the same.\r\n\r\n```\r\n=
+Error: Unexpected value 'CoolComponent in /path/to/project/node_modules/ang=
+ular2-component-module/lib/cool.component.d.ts' declared by the module 'App=
+Module in /path/to/project/app/app.module.ts'. Please add a @Pipe/@Directiv=
+e/@Component annotation.\r\n```\r\n\r\nIs it because `ngx-i18n` only look a=
+t .d.ts file https://github.com/reynardmh/angular2-component-module/blob/ma=
+ster/lib/cool.component.d.ts which does not have component annotation. \r\n=
+\r\ninstead of the compiled .js\r\nhttps://github.com/reynardmh/angular2-co=
+mponent-module/blob/master/lib/cool.component.js\r\n\r\nBecause I can run t=
+he project just fine, this error only happens when running `ngx-i18n`\r\n"}=
+],"action":{"name":"View Issue","url":"https://github.com/angular/angular/i=
+ssues/13186#issuecomment-287633786"}}}</script>=

@@ -1,0 +1,174 @@
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><p=
+>Having more or less a fatal error using ngrx 2.2.1. Gonna work on a repro =
+early next week, but hereby sharing the error message if it helps.</p>
+<p>Environment:</p>
+<ul>
+<li>
+<p>Windows 10</p>
+</li>
+<li>
+<p>Typescript 2.2.1</p>
+</li>
+<li>
+<p>Webpack 2.2.1</p>
+</li>
+<li>
+<p>Angular 4.0.0-rc.3 attempting change to rc.5</p>
+</li>
+<li>
+<p>ngrx store 2.2.1</p>
+</li>
+<li>
+<p>ngrx effects 2.0.0</p>
+</li>
+<li>
+<p>all browsers</p>
+</li>
+</ul>
+<pre><code>Unhandled Promise rejection: Cannot convert undefined or null to=
+ object ; Zone: &lt;root&gt; ; Task: Promise.then ; Value: TypeError: Canno=
+t convert undefined or null to object
+    at Function.keys (&lt;anonymous&gt;)
+    at combineReducers (utils.js:4)
+    at _initialReducerFactory (ng2.js:33)
+    at AppModuleInjector.get (module.ngfactory.js:1)
+    at AppModuleInjector.getInternal (module.ngfactory.js:1)
+    at AppModuleInjector.NgModuleInjector.get (core.es5.js:3538)
+    at _createReducerIfExtension (instrument.js:58)
+    at AppModuleInjector.createInternal (module.ngfactory.js:1)
+    at AppModuleInjector.NgModuleInjector.create (core.es5.js:3519)
+    at NgModuleFactory.create (core.es5.js:3492)
+    at core.es5.js:4688
+    at ZoneDelegate.invoke (zone.js:365)
+    at Object.onInvoke (core.es5.js:4079)
+    at ZoneDelegate.invoke (zone.js:364)
+    at Zone.run (zone.js:125)
+    at NgZone.run (core.es5.js:3948)
+    at PlatformRef_._bootstrapModuleFactoryWithZone (core.es5.js:4686)
+    at core.es5.js:4728
+    at ZoneDelegate.invoke (zone.js:365)
+    at Zone.run (zone.js:125)
+    at zone.js:760
+    at ZoneDelegate.invokeTask (zone.js:398)
+    at Zone.runTask (zone.js:165)
+    at drainMicroTaskQueue (zone.js:593) TypeError: Cannot convert undefine=
+d or null to object
+    at Function.keys (&lt;anonymous&gt;)
+    at combineReducers (http://localhost:1337/assets/vendor.dll.js:63011:30=
+)
+    at _initialReducerFactory (http://localhost:1337/assets/vendor.dll.js:1=
+11202:90)
+    at AppModuleInjector.get (ng:///AppModule/module.ngfactory.js:144:105)
+    at AppModuleInjector.getInternal (ng:///AppModule/module.ngfactory.js:4=
+47:71)
+    at AppModuleInjector.NgModuleInjector.get (http://localhost:1337/assets=
+/vendor.dll.js:3758:44)
+    at _createReducerIfExtension (http://localhost:1337/assets/vendor.bundl=
+e.js:485:32)
+    at AppModuleInjector.createInternal (ng:///AppModule/module.ngfactory.j=
+s:323:22)
+    at AppModuleInjector.NgModuleInjector.create (http://localhost:1337/ass=
+ets/vendor.dll.js:3739:76)
+    at NgModuleFactory.create (http://localhost:1337/assets/vendor.dll.js:3=
+712:18)
+    at http://localhost:1337/assets/vendor.dll.js:4908:61
+    at ZoneDelegate.invoke (http://localhost:1337/assets/polyfills.dll.js:4=
+298:26)
+    at Object.onInvoke (http://localhost:1337/assets/vendor.dll.js:4299:37)
+    at ZoneDelegate.invoke (http://localhost:1337/assets/polyfills.dll.js:4=
+297:32)
+    at Zone.run (http://localhost:1337/assets/polyfills.dll.js:4058:43)
+    at NgZone.run (http://localhost:1337/assets/vendor.dll.js:4168:62)
+    at PlatformRef_._bootstrapModuleFactoryWithZone (http://localhost:1337/=
+assets/vendor.dll.js:4906:23)
+    at http://localhost:1337/assets/vendor.dll.js:4948:59
+    at ZoneDelegate.invoke (http://localhost:1337/assets/polyfills.dll.js:4=
+298:26)
+    at Zone.run (http://localhost:1337/assets/polyfills.dll.js:4058:43)
+    at http://localhost:1337/assets/polyfills.dll.js:4693:57
+    at ZoneDelegate.invokeTask (http://localhost:1337/assets/polyfills.dll.=
+js:4331:31)
+    at Zone.runTask (http://localhost:1337/assets/polyfills.dll.js:4098:47)
+    at drainMicroTaskQueue (http://localhost:1337/assets/polyfills.dll.js:4=
+526:35)
+</code></pre>
+
+<p style=3D"font-size:small;-webkit-text-size-adjust:none;color:#666;">=E2=
+=80=94<br>You are receiving this because you are subscribed to this thread.=
+<br>Reply to this email directly, <a href=3D"https://github.com/angular/ang=
+ular/issues/15250#issuecomment-287558710">view it on GitHub</a>, or <a href=
+=3D"https://github.com/notifications/unsubscribe-auth/AZR1R97ih9I0LbDhIByUF=
+uCDn3tEkWsBks5rnAuXgaJpZM4Mg9GO">mute the thread</a>.<img alt=3D"" height=
+=3D"1" src=3D"https://github.com/notifications/beacon/AZR1R5XQNhD5XaF1_R_Ed=
+wXh7FAH83ILks5rnAuXgaJpZM4Mg9GO.gif" width=3D"1"></p>
+<div itemscope=3D"" itemtype=3D"http://schema.org/EmailMessage">
+<div itemprop=3D"action" itemscope=3D"" itemtype=3D"http://schema.org/ViewA=
+ction">
+  <link itemprop=3D"url" href=3D"https://github.com/angular/angular/issues/=
+15250#issuecomment-287558710"><!-- </link> -->
+  <meta itemprop=3D"name" content=3D"View Issue"><!-- </meta> -->
+</div>
+<meta itemprop=3D"description" content=3D"View this Issue on GitHub"><!-- <=
+/meta> -->
+</div>
+
+<script type=3D"application/json" data-scope=3D"inboxmarkup">{"api_version"=
+:"1.0","publisher":{"api_key":"05dde50f1d1a384dd78767c55493e4bb","name":"Gi=
+tHub"},"entity":{"external_key":"github/angular/angular","title":"angular/a=
+ngular","subtitle":"GitHub repository","main_image_url":"https://cloud.gith=
+ubusercontent.com/assets/143418/17495839/a5054eac-5d88-11e6-95fc-7290892c7b=
+b5.png","avatar_image_url":"https://cloud.githubusercontent.com/assets/1434=
+18/15842166/7c72db34-2c0b-11e6-9aed-b52498112777.png","action":{"name":"Ope=
+n in GitHub","url":"https://github.com/angular/angular"}},"updates":{"snipp=
+ets":[{"icon":"PERSON","message":"@fulls1z3 in #15250: Having more or less =
+a fatal error using ngrx 2.2.1. Gonna work on a repro early next week, but =
+hereby sharing the error message if it helps.\r\n\r\nEnvironment:\r\n\r\n- =
+Windows 10\r\n- Typescript 2.2.1\r\n- Webpack 2.2.1\r\n- Angular 4.0.0-rc.3=
+ attempting change to rc.5\r\n\r\n- ngrx store 2.2.1\r\n- ngrx effects 2.0.=
+0\r\n\r\n- all browsers\r\n\r\n\r\n```\r\nUnhandled Promise rejection: Cann=
+ot convert undefined or null to object ; Zone: \u003croot\u003e ; Task: Pro=
+mise.then ; Value: TypeError: Cannot convert undefined or null to object\r\=
+n    at Function.keys (\u003canonymous\u003e)\r\n    at combineReducers (ut=
+ils.js:4)\r\n    at _initialReducerFactory (ng2.js:33)\r\n    at AppModuleI=
+njector.get (module.ngfactory.js:1)\r\n    at AppModuleInjector.getInternal=
+ (module.ngfactory.js:1)\r\n    at AppModuleInjector.NgModuleInjector.get (=
+core.es5.js:3538)\r\n    at _createReducerIfExtension (instrument.js:58)\r\=
+n    at AppModuleInjector.createInternal (module.ngfactory.js:1)\r\n    at =
+AppModuleInjector.NgModuleInjector.create (core.es5.js:3519)\r\n    at NgMo=
+duleFactory.create (core.es5.js:3492)\r\n    at core.es5.js:4688\r\n    at =
+ZoneDelegate.invoke (zone.js:365)\r\n    at Object.onInvoke (core.es5.js:40=
+79)\r\n    at ZoneDelegate.invoke (zone.js:364)\r\n    at Zone.run (zone.js=
+:125)\r\n    at NgZone.run (core.es5.js:3948)\r\n    at PlatformRef_._boots=
+trapModuleFactoryWithZone (core.es5.js:4686)\r\n    at core.es5.js:4728\r\n=
+    at ZoneDelegate.invoke (zone.js:365)\r\n    at Zone.run (zone.js:125)\r=
+\n    at zone.js:760\r\n    at ZoneDelegate.invokeTask (zone.js:398)\r\n   =
+ at Zone.runTask (zone.js:165)\r\n    at drainMicroTaskQueue (zone.js:593) =
+TypeError: Cannot convert undefined or null to object\r\n    at Function.ke=
+ys (\u003canonymous\u003e)\r\n    at combineReducers (http://localhost:1337=
+/assets/vendor.dll.js:63011:30)\r\n    at _initialReducerFactory (http://lo=
+calhost:1337/assets/vendor.dll.js:111202:90)\r\n    at AppModuleInjector.ge=
+t (ng:///AppModule/module.ngfactory.js:144:105)\r\n    at AppModuleInjector=
+.getInternal (ng:///AppModule/module.ngfactory.js:447:71)\r\n    at AppModu=
+leInjector.NgModuleInjector.get (http://localhost:1337/assets/vendor.dll.js=
+:3758:44)\r\n    at _createReducerIfExtension (http://localhost:1337/assets=
+/vendor.bundle.js:485:32)\r\n    at AppModuleInjector.createInternal (ng://=
+/AppModule/module.ngfactory.js:323:22)\r\n    at AppModuleInjector.NgModule=
+Injector.create (http://localhost:1337/assets/vendor.dll.js:3739:76)\r\n   =
+ at NgModuleFactory.create (http://localhost:1337/assets/vendor.dll.js:3712=
+:18)\r\n    at http://localhost:1337/assets/vendor.dll.js:4908:61\r\n    at=
+ ZoneDelegate.invoke (http://localhost:1337/assets/polyfills.dll.js:4298:26=
+)\r\n    at Object.onInvoke (http://localhost:1337/assets/vendor.dll.js:429=
+9:37)\r\n    at ZoneDelegate.invoke (http://localhost:1337/assets/polyfills=
+.dll.js:4297:32)\r\n    at Zone.run (http://localhost:1337/assets/polyfills=
+.dll.js:4058:43)\r\n    at NgZone.run (http://localhost:1337/assets/vendor.=
+dll.js:4168:62)\r\n    at PlatformRef_._bootstrapModuleFactoryWithZone (htt=
+p://localhost:1337/assets/vendor.dll.js:4906:23)\r\n    at http://localhost=
+:1337/assets/vendor.dll.js:4948:59\r\n    at ZoneDelegate.invoke (http://lo=
+calhost:1337/assets/polyfills.dll.js:4298:26)\r\n    at Zone.run (http://lo=
+calhost:1337/assets/polyfills.dll.js:4058:43)\r\n    at http://localhost:13=
+37/assets/polyfills.dll.js:4693:57\r\n    at ZoneDelegate.invokeTask (http:=
+//localhost:1337/assets/polyfills.dll.js:4331:31)\r\n    at Zone.runTask (h=
+ttp://localhost:1337/assets/polyfills.dll.js:4098:47)\r\n    at drainMicroT=
+askQueue (http://localhost:1337/assets/polyfills.dll.js:4526:35)\r\n```"}],=
+"action":{"name":"View Issue","url":"https://github.com/angular/angular/iss=
+ues/15250#issuecomment-287558710"}}}</script>=

@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Exchange</title>
+    <style type="text/css">		
+        #outlook a {padding:0;}
+        body{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; }
+        .ExternalClass {width:100%;}
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 130%;}
+        #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important; background-color:#f0fbff; font-family: Arial, Helvetica, sans-serif;}
+
+        img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+        a img {border:none;}
+        .image_fix {display:block;}
+
+        p {margin: 1em 0;}
+        p.footer { text-align: center; color: #818386; }
+        p.item-excerpt {
+            /*font-size:	13px;*/
+            color: #3d3d3d;
+            margin-top: 5px;
+        }
+        p.item-link {
+            margin: 5px 0 0 0;
+        }
+        span.item-label {
+            color: #aaaaaa;
+            /*font-size: 13px;*/
+        }
+
+        h1, h2, h3, h4, h5, h6 {color: black }
+
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: blue}
+
+        h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+            color: red;
+        }
+
+        h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+            color: purple;
+        }
+
+        table td {border-collapse: collapse;}
+
+        table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+
+        .emailfooter {
+            width: 600px;
+        }
+
+        .emailfooter td {
+            padding-top: 30px;
+        }
+
+        a {color: #0077cc; text-decoration:none;}
+        a:link { color: #0077cc; }
+        a:visited { color: #0077cc; }
+        a:hover { color: #3da5ef; }
+
+        .header-text {
+            /*font-size: 14px;*/
+        }
+
+        #emailcontainer {
+            width: 600px;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            background: #ffffff;
+        }
+		
+        @media only screen and (max-device-width: 480px),
+                only screen and (max-width: 480px) 
+            {
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: black;
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+            #emailcontainer	{
+                width: 90%;
+            }
+            .emailfooter {
+                width: 90%;
+            }
+
+            .header-text {
+                font-size: 100%;
+                line-height: 1.2;
+            } 
+
+            .item-link {
+                font-size: 100%;
+                line-height: 22px;
+            }
+
+            .item-excerpt {
+                line-height: 18px;
+            }           
+        }
+
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px),
+                only screen and (min-width: 768px) and (max-width: 1024px)
+        {
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: blue; /* or whatever your want */
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+            #emailcontainer	{
+                width: 90%;
+            }
+            .emailfooter {
+                width: 90%;
+            }
+
+            .header-text {
+                font-size: 100%;
+                line-height: 1.2;
+            }
+
+            .item-link {
+                font-size: 100%;
+                line-height: 22px;
+            }
+
+            .item-excerpt {
+                line-height: 18px;
+            } 
+        }
+    </style>
+</head>
+<body style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0; line-height: 1.2;">
+    <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 0;padding: 0;background-color: #f0fbff;font-family: Arial, Helvetica, sans-serif;width: 100% !important; height: 100% !important; ">
+        <tr>
+            <td align="center" style="padding-bottom: 40px;border-collapse: collapse;">
+                <!-- logo table -->
+                <table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                    <tr>
+                        <td align="center" style="padding-top: 30px;padding-bottom: 30px;text-align: center;border-collapse: collapse;">
+                            <img src="https://cdn.sstatic.net/stackexchange/img/se-logo.png" alt="Stack Exchange" width="180px" height="43px" style="width:180px; height: 43px; margin-left: auto; margin-right: auto; outline: none; text-decoration: none;-ms-interpolation-mode: bicubic;">
+                        </td>
+                    </tr>
+                </table>
+                
+                <div style="max-width: 600px; border-radius: 3px;">
+                <!-- email body table -->
+                <table id="emailcontainer" cellpadding="0" cellspacing="0" border="0" align="center" style="max-width: 600px; border: 1px solid #eee; border-radius: 3px; background: #ffffff">
+                    <tr>
+<td valign="top" align="center" style="background-color: #2f3552; color: #90d9f5">
+
+<table width="90%">
+    <tbody>
+        <tr>
+            <td style="padding: 15px 0; padding-right: 5px;" valign="middle" align="left">
+                <img height="48" width="48" style="height: 48px; width: 48px;" src="https://sstatic.net/img/icon-rss.png">
+            </td>
+            <td align="left" valign="middle" style="padding: 15px 0; color: white; text-align: left;">
+                <span class="header-text" style="display: block;">
+                    The following 5 items were added to your Stack Exchange <a style="color: #90d9f5; text-decoration: none;" href="https://stackexchange.com/filters/279357/secondfilter">&quot;SecondFilter&quot; feed</a>.
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</td>
+</tr>
+
+<tr>
+<td align="center" style="padding-top: 15px; padding-bottom: 25px;">
+
+
+<table width="90%">
+    <tbody>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/superuser/img/apple-touch-icon.png" alt="Super User" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="https://superuser.com/questions/1190930/cant-execute-binary-program" style="color: #0077cc; text-decoration: none;">Can't execute binary program</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I'm using a fairly cut down version of Linux, which doesn't have Bash. It does however, have Ash. I'm not sure what exactly the differences are, but it seemed like it might be relevant.
+
+Normally I  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="https://superuser.com/tags/linux" style="color: #0077cc; text-decoration: none;">linux</a>,                                            <a href="https://superuser.com/tags/bash" style="color: #0077cc; text-decoration: none;">bash</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-21 19:18:16Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 21 at 19:18</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42936267/osx-how-to-install-a-package-into-users-application-support-directory" style="color: #0077cc; text-decoration: none;">osx: How to install a package into user's application support directory?</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I need to install 2 audio plugins to the root Audio/Plug-Ins/VST &amp;amp; Components directories. My installer does that fine. But I also need to install a directory of preset files into /Users/$USER/...
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/bash" style="color: #0077cc; text-decoration: none;">bash</a>,                                            <a href="http://stackoverflow.com/tags/osx" style="color: #0077cc; text-decoration: none;">osx</a>,                                            <a href="http://stackoverflow.com/tags/installer" style="color: #0077cc; text-decoration: none;">installer</a>,                                            <a href="http://stackoverflow.com/tags/pkgbuild" style="color: #0077cc; text-decoration: none;">pkgbuild</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-21 19:16:28Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 21 at 19:16</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42936163/regular-expression-between-2-strings-numeric-only" style="color: #0077cc; text-decoration: none;">Regular Expression between 2 strings (Numeric Only )</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I have this code that I need to do a regular expression between &quot;media_count&quot;: and ,. 
+Meaning I should end up only with  370606 , 168, 250 , 67 
+
+{&quot;position&quot;: 0, &quot;hash&quot;: {&quot;media_count&quot;: 370606,  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/regex" style="color: #0077cc; text-decoration: none;">regex</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-21 19:10:52Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 21 at 19:10</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42936156/read-sym-linked-stdout-in-linux-with-docker" style="color: #0077cc; text-decoration: none;">Read sym linked stdout in linux (with docker)</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        My intention is to receive the stdout of one docker container in another to perform a certain action when a background process finishes.
+
+I've borrowed this piece of code from here:
+
+ln -sf /dev/...
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/linux" style="color: #0077cc; text-decoration: none;">linux</a>,                                            <a href="http://stackoverflow.com/tags/docker" style="color: #0077cc; text-decoration: none;">docker</a>,                                            <a href="http://stackoverflow.com/tags/symlink" style="color: #0077cc; text-decoration: none;">symlink</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-21 19:10:29Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 21 at 19:10</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42936125/regex-php-to-match-all-this-thisisthis-is-including-this-is-as-a-match-f" style="color: #0077cc; text-decoration: none;">Regex PHP to match ALL this-&gt; (this|is|this is) including &quot;this is&quot; as a match from a string</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I have the following string:
+
+&quot;Hello, this is my string, exclude thisis!&quot;
+
+I want a regex to match this, is and this is but NOT thisis.
+
+So far i tried (?i)\b(this|is|this is)\b
+
+but it only matches  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/regex" style="color: #0077cc; text-decoration: none;">regex</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-21 19:08:35Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 21 at 19:08</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+        <tr style="padding: 15px 0;">
+            <td></td>
+            <td valign="top" align="left">
+
+                <p style="color: #444; font-size: 85%;">
+                    <a href="https://stackexchange.com/email/unsubscribe-filter/701415/1714015131?code=n%2fBoKOoj1x36t0hU4g3aZVwxBEsWII%2b5y6qx%2b4HCs9k%3d" style="color: #0077cc; text-decoration: none;">Unsubscribe from this filter</a> or change your email preferences by visiting
+
+                        your <a href="https://stackexchange.com/users/10489699?tab=subscriptions" style="color: #0077cc; text-decoration: none;">filter subscriptions page on stackexchange.com</a>.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+</td>
+</tr>
+
+                </table>
+                </div>
+                
+                <div style="text-align: center; max-width: 600px;">
+                    <table class="emailfooter" style="margin-left: auto; margin-right: auto; font-size: 95%;">
+                        <tr>
+                            <td>
+                                <p><span style="color:#999; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;"> 
+    Questions? Comments? Let us know on our <a href="https://meta.stackexchange.com">feedback site</a>.
+            If you no longer want to receive mail from Stack Exchange, <a href="https://stackexchange.com/email/manage/1078893/4585631041ce7c205ab6c1caaf0a41e5ee0c444085d2cd145fe6c9bc580c6804">unsubscribe</a> from all stackexchange.com emails.
+</span></p>
+
+<p><span style="color:#999; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;">Stack Exchange Inc. 110 William Street, 28th floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span></span></p>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!-- End of wrapper table -->
+</body>
+</html>

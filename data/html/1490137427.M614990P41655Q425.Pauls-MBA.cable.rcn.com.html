@@ -1,0 +1,522 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Exchange</title>
+    <style type="text/css">		
+        #outlook a {padding:0;}
+        body{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; }
+        .ExternalClass {width:100%;}
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 130%;}
+        #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important; background-color:#f0fbff; font-family: Arial, Helvetica, sans-serif;}
+
+        img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+        a img {border:none;}
+        .image_fix {display:block;}
+
+        p {margin: 1em 0;}
+        p.footer { text-align: center; color: #818386; }
+        p.item-excerpt {
+            /*font-size:	13px;*/
+            color: #3d3d3d;
+            margin-top: 5px;
+        }
+        p.item-link {
+            margin: 5px 0 0 0;
+        }
+        span.item-label {
+            color: #aaaaaa;
+            /*font-size: 13px;*/
+        }
+
+        h1, h2, h3, h4, h5, h6 {color: black }
+
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: blue}
+
+        h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+            color: red;
+        }
+
+        h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+            color: purple;
+        }
+
+        table td {border-collapse: collapse;}
+
+        table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+
+        .emailfooter {
+            width: 600px;
+        }
+
+        .emailfooter td {
+            padding-top: 30px;
+        }
+
+        a {color: #0077cc; text-decoration:none;}
+        a:link { color: #0077cc; }
+        a:visited { color: #0077cc; }
+        a:hover { color: #3da5ef; }
+
+        .header-text {
+            /*font-size: 14px;*/
+        }
+
+        #emailcontainer {
+            width: 600px;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            background: #ffffff;
+        }
+		
+        @media only screen and (max-device-width: 480px),
+                only screen and (max-width: 480px) 
+            {
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: black;
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+            #emailcontainer	{
+                width: 90%;
+            }
+            .emailfooter {
+                width: 90%;
+            }
+
+            .header-text {
+                font-size: 100%;
+                line-height: 1.2;
+            } 
+
+            .item-link {
+                font-size: 100%;
+                line-height: 22px;
+            }
+
+            .item-excerpt {
+                line-height: 18px;
+            }           
+        }
+
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px),
+                only screen and (min-width: 768px) and (max-width: 1024px)
+        {
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: blue; /* or whatever your want */
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+            #emailcontainer	{
+                width: 90%;
+            }
+            .emailfooter {
+                width: 90%;
+            }
+
+            .header-text {
+                font-size: 100%;
+                line-height: 1.2;
+            }
+
+            .item-link {
+                font-size: 100%;
+                line-height: 22px;
+            }
+
+            .item-excerpt {
+                line-height: 18px;
+            } 
+        }
+    </style>
+</head>
+<body style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0; line-height: 1.2;">
+    <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 0;padding: 0;background-color: #f0fbff;font-family: Arial, Helvetica, sans-serif;width: 100% !important; height: 100% !important; ">
+        <tr>
+            <td align="center" style="padding-bottom: 40px;border-collapse: collapse;">
+                <!-- logo table -->
+                <table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                    <tr>
+                        <td align="center" style="padding-top: 30px;padding-bottom: 30px;text-align: center;border-collapse: collapse;">
+                            <img src="https://cdn.sstatic.net/stackexchange/img/se-logo.png" alt="Stack Exchange" width="180px" height="43px" style="width:180px; height: 43px; margin-left: auto; margin-right: auto; outline: none; text-decoration: none;-ms-interpolation-mode: bicubic;">
+                        </td>
+                    </tr>
+                </table>
+                
+                <div style="max-width: 600px; border-radius: 3px;">
+                <!-- email body table -->
+                <table id="emailcontainer" cellpadding="0" cellspacing="0" border="0" align="center" style="max-width: 600px; border: 1px solid #eee; border-radius: 3px; background: #ffffff">
+                    <tr>
+<td valign="top" align="center" style="background-color: #2f3552; color: #90d9f5">
+
+<table width="90%">
+    <tbody>
+        <tr>
+            <td style="padding: 15px 0; padding-right: 5px;" valign="middle" align="left">
+                <img height="48" width="48" style="height: 48px; width: 48px;" src="https://sstatic.net/img/icon-rss.png">
+            </td>
+            <td align="left" valign="middle" style="padding: 15px 0; color: white; text-align: left;">
+                <span class="header-text" style="display: block;">
+                    The following 9 items were added to your Stack Exchange <a style="color: #90d9f5; text-decoration: none;" href="https://stackexchange.com/filters/279355/my-filter-1">&quot;My_Filter_1&quot; feed</a>.
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</td>
+</tr>
+
+<tr>
+<td align="center" style="padding-top: 15px; padding-bottom: 25px;">
+
+
+<table width="90%">
+    <tbody>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42901219/how-to-segregate-the-roles-accordingly-using-angular-js-from-json-file" style="color: #0077cc; text-decoration: none;">How to segregate the roles accordingly using angular js from json file?</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        Valid JSON
+
+[{
+&quot;_id&quot;: &quot;dd0af4084a0968f9301d535db&quot;,
+&quot;user&quot;:&quot;gdarad@gmail.com&quot;,
+&quot;role&quot;:&quot;Admin&quot;
+} ,
+{
+&quot;_id&quot;: &quot;dd0af4084f6f4c84a0301d535db&quot;,
+&quot;user&quot;:&quot;hunam@gmail.com&quot;,
+&quot;role&quot;:&quot;editor&quot;
+} ,
+{
+&quot;_id&quot;: &quot;...
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/javascript" style="color: #0077cc; text-decoration: none;">javascript</a>,                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/json" style="color: #0077cc; text-decoration: none;">json</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 10:28:53Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 10:28</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42901212/ui-router-q-resolve-causes-infdig" style="color: #0077cc; text-decoration: none;">ui-router $q resolve causes infdig</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        When I try to use resolve in a ui router state with an angular service that uses $q for creating a promise I get a $rootscope infdig error ([$rootScope:infdig] http://errors.angularjs.org/1.5.8/$...
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/javascript" style="color: #0077cc; text-decoration: none;">javascript</a>,                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/angularjs-scope" style="color: #0077cc; text-decoration: none;">angularjs-scope</a>,                                            <a href="http://stackoverflow.com/tags/angular-ui-router" style="color: #0077cc; text-decoration: none;">angular-ui-router</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 10:28:40Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 10:28</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42901191/angular-1-x-ui-router-cant-navigate-to-routes-other-than-default" style="color: #0077cc; text-decoration: none;">angular 1.x ui-router can't navigate to routes other than default</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I have an angular 1.5 app with ui-router.
+i have configured the router like this:
+
+$stateProvider
+          .state('home', {
+              url: '/home',
+              controller: 'HomeController',
+     ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/angular-ui-router" style="color: #0077cc; text-decoration: none;">angular-ui-router</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 10:27:35Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 10:27</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42901174/click-triggered-on-list-item-while-scrolling" style="color: #0077cc; text-decoration: none;">Click triggered on list item while scrolling</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I'm using AngularJS (1.6) with Angular Material.
+
+I have a page with a list of a hundred items (FYI, I use Angular Material's md-list but I'm not sure it's relevant). The items of this list are  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/android" style="color: #0077cc; text-decoration: none;">android</a>,                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/google-chrome" style="color: #0077cc; text-decoration: none;">google-chrome</a>,                                            <a href="http://stackoverflow.com/tags/angular-material" style="color: #0077cc; text-decoration: none;">angular-material</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 10:26:54Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 10:26</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42901167/get-client-ip-in-javascript-angularjs" style="color: #0077cc; text-decoration: none;">Get client IP in javascript/angularjs</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I'm trying to get client IP in my angular app. 
+I'm using this code:
+
+$http.get(&quot;http://l2.io/ip.js&quot;).then(function(response) {       $scope.ip = response.data;  });
+But it make Error: XMLHttpRequest  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/javascript" style="color: #0077cc; text-decoration: none;">javascript</a>,                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/http" style="color: #0077cc; text-decoration: none;">http</a>,                                            <a href="http://stackoverflow.com/tags/xmlhttprequest" style="color: #0077cc; text-decoration: none;">xmlhttprequest</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 10:26:26Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 10:26</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42901071/copy-folder-and-change-file-names-using-grunt" style="color: #0077cc; text-decoration: none;">Copy folder and change file names using grunt</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I want to copy one folder and rename files of that folder using grunt.
+
+Basic Structure:
+
+mainfolder
+   -project
+       -project.js
+       -project.html
+
+I want to copy project folder and want to ...
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/gruntjs" style="color: #0077cc; text-decoration: none;">gruntjs</a>,                                            <a href="http://stackoverflow.com/tags/grunt-contrib-copy" style="color: #0077cc; text-decoration: none;">grunt-contrib-copy</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 10:22:00Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 10:22</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42901001/saving-angular-grid-as-json-with-its-data" style="color: #0077cc; text-decoration: none;">Saving angular grid as json with its data</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I am using angular UI grid in a tool where users can edit the records and add new columns to the grid based on the needs.I want to enable storing the UI Grid with the data for the users to play on it  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/javascript" style="color: #0077cc; text-decoration: none;">javascript</a>,                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/angular-ui-grid" style="color: #0077cc; text-decoration: none;">angular-ui-grid</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 10:18:57Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 10:18</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42900966/spring-angular-send-exception-from-back-to-front" style="color: #0077cc; text-decoration: none;">Spring, angular : send exception from back to front</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I'm new to spring, i'm using spring for back and angular for front.
+I want to send exception from back to front, but i can't find anything about that. Should I use a webservice to do that ?
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/spring" style="color: #0077cc; text-decoration: none;">spring</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 10:17:11Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 10:17</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42900883/angular-directives-for-displaying-dates-in-alternative-to-rsmdatedropdowns-for" style="color: #0077cc; text-decoration: none;">Angular directives for displaying dates in alternative to rsmdatedropdowns, for the purpose of translating days and month</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        This is the current code.
+
+im new in Angular and frankly did not know where to look first.
+all help is appreciated!
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/html" style="color: #0077cc; text-decoration: none;">html</a>,                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/internationalization" style="color: #0077cc; text-decoration: none;">internationalization</a>,                                            <a href="http://stackoverflow.com/tags/directive" style="color: #0077cc; text-decoration: none;">directive</a>,                                            <a href="http://stackoverflow.com/tags/angular-directive" style="color: #0077cc; text-decoration: none;">angular-directive</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 10:13:53Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 10:13</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+        <tr style="padding: 15px 0;">
+            <td></td>
+            <td valign="top" align="left">
+
+                <p style="color: #444; font-size: 85%;">
+                    <a href="https://stackexchange.com/email/unsubscribe-filter/701414/654974288?code=Dhh8hC4V5DGCLcrB6ih8WDg9flnDAv3OTfEe%2fXHTIQU%3d" style="color: #0077cc; text-decoration: none;">Unsubscribe from this filter</a> or change your email preferences by visiting
+
+                        your <a href="https://stackexchange.com/users/10489699?tab=subscriptions" style="color: #0077cc; text-decoration: none;">filter subscriptions page on stackexchange.com</a>.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+</td>
+</tr>
+
+                </table>
+                </div>
+                
+                <div style="text-align: center; max-width: 600px;">
+                    <table class="emailfooter" style="margin-left: auto; margin-right: auto; font-size: 95%;">
+                        <tr>
+                            <td>
+                                <p><span style="color:#999; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;"> 
+    Questions? Comments? Let us know on our <a href="https://meta.stackexchange.com">feedback site</a>.
+            If you no longer want to receive mail from Stack Exchange, <a href="https://stackexchange.com/email/manage/1078893/4585631041ce7c205ab6c1caaf0a41e5ee0c444085d2cd145fe6c9bc580c6804">unsubscribe</a> from all stackexchange.com emails.
+</span></p>
+
+<p><span style="color:#999; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;">Stack Exchange Inc. 110 William Street, 28th floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span></span></p>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!-- End of wrapper table -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><p>[X] feature request</p>
+<p>This is a feature I am proposing for a future Angular.</p>
+<p><strong>Current behavior</strong></p>
+<p>Both FormGroup and FormControl provide <code>.valueChanges</code>, and observable stream of changes to the control or group of controls' value. This is very helpful, but it seems to omit the first value (before the first &quot;change&quot;) for no particularly good reason other than consistency with the name.</p>
+<p>This is easily worked around by with something like this:</p>
+<pre><code>const x$ = this.aControl.valueChanges.startWith(this.aControl.value);
+</code></pre>
+<p>... which is effective, but verbose and repetitive.</p>
+<p><strong>Expected behavior</strong></p>
+<p>Programmatically, very often when handling a control or group as an observable stream, one wants access to the entire stream from the beginning.</p>
+<p>Therefore, I request that <code>.valueChanges</code> be supplemented with <code>.values</code>, which would be an Observable that emits both the initial value and changes.</p>
+<p><strong>Minimal reproduction of the problem with instructions</strong></p>
+<p>A search of Github yields numerous cases and published Angular code where something similar to the above pattern appears.</p>
+<p><a href="https://github.com/search?q=valueChanges.startWith&amp;ref=simplesearch&amp;type=Code&amp;utf8=%E2%9C%93">https://github.com/search?q=valueChanges.startWith&amp;ref=simplesearch&amp;type=Code&amp;utf8=%E2%9C%93</a></p>
+<p>All of these, as well as similar code behind countless corporate firewalls, could be tightened up by this API improvement.</p>
+
+<p style="font-size:small;-webkit-text-size-adjust:none;color:#666;">—<br>You are receiving this because you are subscribed to this thread.<br>Reply to this email directly, <a href="https://github.com/angular/angular/issues/15282">view it on GitHub</a>, or <a href="https://github.com/notifications/unsubscribe-auth/AZR1R3xa-IxgfA1YXF1KDM_kuUKp8VBZks5rnDUVgaJpZM4MhhV7">mute the thread</a>.<img alt="" height="1" src="https://github.com/notifications/beacon/AZR1R26MDZm5z1qfq8AY0zuAarlqszaRks5rnDUVgaJpZM4MhhV7.gif" width="1"></p>
+<div itemscope="" itemtype="http://schema.org/EmailMessage">
+<div itemprop="action" itemscope="" itemtype="http://schema.org/ViewAction">
+  <link itemprop="url" href="https://github.com/angular/angular/issues/15282"><!-- </link> -->
+  <meta itemprop="name" content="View Issue"><!-- </meta> -->
+</div>
+<meta itemprop="description" content="View this Issue on GitHub"><!-- </meta> -->
+</div>
+
+<script type="application/json" data-scope="inboxmarkup">{"api_version":"1.0","publisher":{"api_key":"05dde50f1d1a384dd78767c55493e4bb","name":"GitHub"},"entity":{"external_key":"github/angular/angular","title":"angular/angular","subtitle":"GitHub repository","main_image_url":"https://cloud.githubusercontent.com/assets/143418/17495839/a5054eac-5d88-11e6-95fc-7290892c7bb5.png","avatar_image_url":"https://cloud.githubusercontent.com/assets/143418/15842166/7c72db34-2c0b-11e6-9aed-b52498112777.png","action":{"name":"Open in GitHub","url":"https://github.com/angular/angular"}},"updates":{"snippets":[{"icon":"DESCRIPTION","message":"FormGroup and FormControl - values / valueChanges? (#15282)"}],"action":{"name":"View Issue","url":"https://github.com/angular/angular/issues/15282"}}}</script>

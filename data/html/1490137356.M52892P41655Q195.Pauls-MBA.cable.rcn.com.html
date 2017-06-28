@@ -1,0 +1,147 @@
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><p=
+>I'm researching a lot but all I found is &quot;do this and it will work&qu=
+ot; but it does not. Also the error message can not be correct and it is wo=
+rking when I save the file again.</p>
+<p><strong>I'm submitting a ...</strong>  (check one with &quot;x&quot;)</p=
+>
+<pre><code>[x] bug report
+[ ] feature request
+[ ] support request
+</code></pre>
+<p><strong>Current behavior</strong><br>
+When I start <code>ng serve</code> and everything is compiled already I get=
+ the following error:</p>
+<pre><code>ERROR in Error encountered resolving symbol values statically. F=
+unction calls are not supported. Consider replacing the function or lambda =
+with a reference to an exported function (position 17:12 in the original .t=
+s file), resolving symbol TranslateLogHandler in /home/iras/work/angular2-c=
+li-t
+est/node_modules/angular2-translator/src/TranslateService.ts, resolving sym=
+bol TranslateLogHandler in /home/iras/work/angular2-cli-test/node_modules/a=
+ngular2-translator/index.d.ts, resolving symbol AppModule in /home/iras/wor=
+k/angular2-cli-test/src/app/app.module.ts, resolving symbol AppModul
+e in /home/iras/work/angular2-cli-test/src/app/app.module.ts
+</code></pre>
+<p>Yes, of course you will write use an exported function - please have a l=
+ook in <em>Minimal reproduction of the problem with instructions</em>.</p>
+<p>When I save/touch the file (update mtime from file) while ng-serve is ru=
+nning. It gets recompiled without error: <code>webpack: Compiled successful=
+ly.</code>.</p>
+<p><strong>Expected behavior</strong><br>
+It should always work not just sometimes.</p>
+<p><strong>Minimal reproduction of the problem with instructions</strong><b=
+r>
+Create a new project <code>ng new justAnotherBug</code>. And a file <code>s=
+rc/app/Logger.ts</code> with the following content:</p>
+<div class=3D"highlight highlight-source-ts"><pre><span class=3D"pl-k">expo=
+rt</span> <span class=3D"pl-k">const</span> Logger <span class=3D"pl-k">=3D=
+</span> {
+  <span class=3D"pl-en">debug</span>: () <span class=3D"pl-k">=3D&gt;</span=
+> {},
+  <span class=3D"pl-en">error</span>: (<span class=3D"pl-v">message</span>)=
+ <span class=3D"pl-k">=3D&gt;</span> <span class=3D"pl-c1">console</span> <=
+span class=3D"pl-k">&amp;&amp;</span> <span class=3D"pl-c1">console</span>.=
+<span class=3D"pl-c1">error</span> <span class=3D"pl-k">&amp;&amp;</span> <=
+span class=3D"pl-c1">console</span>.<span class=3D"pl-c1">error</span>(<spa=
+n class=3D"pl-smi">message</span>),
+  <span class=3D"pl-en">info</span>: () <span class=3D"pl-k">=3D&gt;</span>=
+ {},
+}</pre></div>
+<p>Write this in your app.module.ts:</p>
+<pre><code>import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+import { AppComponent } from './app.component';
+import { Logger } from './Logger';
+
+export function getLogger() {
+  return {
+      debug: () =3D&gt; {},
+      error: (message) =3D&gt; console &amp;&amp; console.error &amp;&amp; =
+console.error(message),
+      info: (message) =3D&gt; console &amp;&amp; console.log &amp;&amp; con=
+sole.log(message),
+  };
+};
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule
+  ],
+  providers: [
+    { provide: Logger, useFactory: getLogger, deps: [] }
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+</code></pre>
+<p>Finally run <code>ng serve</code>. When it works: restart <code>ng serve=
+</code> without modifying the file again (first time it will work usually).=
+</p>
+<p><strong>What is the motivation / use case for changing the behavior?</st=
+rong><br>
+The use case is to overwrite the Logger for this application (the Logger co=
+uld be from any third party module).</p>
+<p><strong>Please tell us about your environment:</strong></p>
+<pre><code>$ uname -sr
+Linux 4.9.13-1-MANJARO
+$ npm --version
+4.4.1
+$ node --version
+v7.7.2
+node: 7.7.2
+$ npm list |grep -e '\@angular'
+=E2=94=9C=E2=94=80=E2=94=AC @angular/cli@1.0.0-rc.2
+=E2=94=82 =E2=94=9C=E2=94=80=E2=94=AC @angular/tsc-wrapped@0.5.2
+=E2=94=9C=E2=94=80=E2=94=80 @angular/common@2.4.10
+=E2=94=9C=E2=94=80=E2=94=80 @angular/compiler@2.4.10
+=E2=94=9C=E2=94=80=E2=94=AC @angular/compiler-cli@2.4.10
+=E2=94=9C=E2=94=80=E2=94=80 @angular/core@2.4.10
+=E2=94=9C=E2=94=80=E2=94=80 @angular/forms@2.4.10
+=E2=94=9C=E2=94=80=E2=94=80 @angular/http@2.4.10
+=E2=94=9C=E2=94=80=E2=94=80 @angular/platform-browser@2.4.10
+=E2=94=9C=E2=94=80=E2=94=80 @angular/platform-browser-dynamic@2.4.10
+=E2=94=9C=E2=94=80=E2=94=80 @angular/router@3.4.10
+
+* **Browser:** all
+=20
+* **Language:** TypeScript 2.0 &#43; 2.2 (tried both)
+</code></pre>
+
+<p style=3D"font-size:small;-webkit-text-size-adjust:none;color:#666;">=E2=
+=80=94<br>You are receiving this because you are subscribed to this thread.=
+<br>Reply to this email directly, <a href=3D"https://github.com/angular/ang=
+ular/issues/15287">view it on GitHub</a>, or <a href=3D"https://github.com/=
+notifications/unsubscribe-auth/AZR1R0i3NG6Qc9jsVFtVcWURiHAkFM1Bks5rnRZ4gaJp=
+ZM4MhtZe">mute the thread</a>.<img alt=3D"" height=3D"1" src=3D"https://git=
+hub.com/notifications/beacon/AZR1R1IZyL2ehomDLLPFU_rJ80d43hD8ks5rnRZ4gaJpZM=
+4MhtZe.gif" width=3D"1"></p>
+<div itemscope=3D"" itemtype=3D"http://schema.org/EmailMessage">
+<div itemprop=3D"action" itemscope=3D"" itemtype=3D"http://schema.org/ViewA=
+ction">
+  <link itemprop=3D"url" href=3D"https://github.com/angular/angular/issues/=
+15287"><!-- </link> -->
+  <meta itemprop=3D"name" content=3D"View Issue"><!-- </meta> -->
+</div>
+<meta itemprop=3D"description" content=3D"View this Issue on GitHub"><!-- <=
+/meta> -->
+</div>
+
+<script type=3D"application/json" data-scope=3D"inboxmarkup">{"api_version"=
+:"1.0","publisher":{"api_key":"05dde50f1d1a384dd78767c55493e4bb","name":"Gi=
+tHub"},"entity":{"external_key":"github/angular/angular","title":"angular/a=
+ngular","subtitle":"GitHub repository","main_image_url":"https://cloud.gith=
+ubusercontent.com/assets/143418/17495839/a5054eac-5d88-11e6-95fc-7290892c7b=
+b5.png","avatar_image_url":"https://cloud.githubusercontent.com/assets/1434=
+18/15842166/7c72db34-2c0b-11e6-9aed-b52498112777.png","action":{"name":"Ope=
+n in GitHub","url":"https://github.com/angular/angular"}},"updates":{"snipp=
+ets":[{"icon":"DESCRIPTION","message":"Wrong error about non exported funct=
+ion for decorators (#15287)"}],"action":{"name":"View Issue","url":"https:/=
+/github.com/angular/angular/issues/15287"}}}</script>=

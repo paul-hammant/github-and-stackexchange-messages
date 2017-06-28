@@ -1,0 +1,435 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Exchange</title>
+    <style type="text/css">		
+        #outlook a {padding:0;}
+        body{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; }
+        .ExternalClass {width:100%;}
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 130%;}
+        #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important; background-color:#f0fbff; font-family: Arial, Helvetica, sans-serif;}
+
+        img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+        a img {border:none;}
+        .image_fix {display:block;}
+
+        p {margin: 1em 0;}
+        p.footer { text-align: center; color: #818386; }
+        p.item-excerpt {
+            /*font-size:	13px;*/
+            color: #3d3d3d;
+            margin-top: 5px;
+        }
+        p.item-link {
+            margin: 5px 0 0 0;
+        }
+        span.item-label {
+            color: #aaaaaa;
+            /*font-size: 13px;*/
+        }
+
+        h1, h2, h3, h4, h5, h6 {color: black }
+
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: blue}
+
+        h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+            color: red;
+        }
+
+        h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+            color: purple;
+        }
+
+        table td {border-collapse: collapse;}
+
+        table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+
+        .emailfooter {
+            width: 600px;
+        }
+
+        .emailfooter td {
+            padding-top: 30px;
+        }
+
+        a {color: #0077cc; text-decoration:none;}
+        a:link { color: #0077cc; }
+        a:visited { color: #0077cc; }
+        a:hover { color: #3da5ef; }
+
+        .header-text {
+            /*font-size: 14px;*/
+        }
+
+        #emailcontainer {
+            width: 600px;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            background: #ffffff;
+        }
+		
+        @media only screen and (max-device-width: 480px),
+                only screen and (max-width: 480px) 
+            {
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: black;
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+            #emailcontainer	{
+                width: 90%;
+            }
+            .emailfooter {
+                width: 90%;
+            }
+
+            .header-text {
+                font-size: 100%;
+                line-height: 1.2;
+            } 
+
+            .item-link {
+                font-size: 100%;
+                line-height: 22px;
+            }
+
+            .item-excerpt {
+                line-height: 18px;
+            }           
+        }
+
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px),
+                only screen and (min-width: 768px) and (max-width: 1024px)
+        {
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: blue; /* or whatever your want */
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+            #emailcontainer	{
+                width: 90%;
+            }
+            .emailfooter {
+                width: 90%;
+            }
+
+            .header-text {
+                font-size: 100%;
+                line-height: 1.2;
+            }
+
+            .item-link {
+                font-size: 100%;
+                line-height: 22px;
+            }
+
+            .item-excerpt {
+                line-height: 18px;
+            } 
+        }
+    </style>
+</head>
+<body style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0; line-height: 1.2;">
+    <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 0;padding: 0;background-color: #f0fbff;font-family: Arial, Helvetica, sans-serif;width: 100% !important; height: 100% !important; ">
+        <tr>
+            <td align="center" style="padding-bottom: 40px;border-collapse: collapse;">
+                <!-- logo table -->
+                <table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                    <tr>
+                        <td align="center" style="padding-top: 30px;padding-bottom: 30px;text-align: center;border-collapse: collapse;">
+                            <img src="https://cdn.sstatic.net/stackexchange/img/se-logo.png" alt="Stack Exchange" width="180px" height="43px" style="width:180px; height: 43px; margin-left: auto; margin-right: auto; outline: none; text-decoration: none;-ms-interpolation-mode: bicubic;">
+                        </td>
+                    </tr>
+                </table>
+                
+                <div style="max-width: 600px; border-radius: 3px;">
+                <!-- email body table -->
+                <table id="emailcontainer" cellpadding="0" cellspacing="0" border="0" align="center" style="max-width: 600px; border: 1px solid #eee; border-radius: 3px; background: #ffffff">
+                    <tr>
+<td valign="top" align="center" style="background-color: #2f3552; color: #90d9f5">
+
+<table width="90%">
+    <tbody>
+        <tr>
+            <td style="padding: 15px 0; padding-right: 5px;" valign="middle" align="left">
+                <img height="48" width="48" style="height: 48px; width: 48px;" src="https://sstatic.net/img/icon-rss.png">
+            </td>
+            <td align="left" valign="middle" style="padding: 15px 0; color: white; text-align: left;">
+                <span class="header-text" style="display: block;">
+                    The following 6 items were added to your Stack Exchange <a style="color: #90d9f5; text-decoration: none;" href="https://stackexchange.com/filters/279357/secondfilter">&quot;SecondFilter&quot; feed</a>.
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</td>
+</tr>
+
+<tr>
+<td align="center" style="padding-top: 15px; padding-bottom: 25px;">
+
+
+<table width="90%">
+    <tbody>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42926885/string-replacement-efficiency-java" style="color: #0077cc; text-decoration: none;">String replacement efficiency java</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        Which way is more efficient to replace characters/substring in a string. I have searched and i have found two ways : 
+
+output = output.replaceAll(REGEX, REPLACEMENT);
+or
+
+Pattern p =  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/java" style="color: #0077cc; text-decoration: none;">java</a>,                                            <a href="http://stackoverflow.com/tags/regex" style="color: #0077cc; text-decoration: none;">regex</a>,                                            <a href="http://stackoverflow.com/tags/replace" style="color: #0077cc; text-decoration: none;">replace</a>,                                            <a href="http://stackoverflow.com/tags/matcher" style="color: #0077cc; text-decoration: none;">matcher</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-21 12:15:40Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 21 at 12:15</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42926831/software-works-within-user-space-but-not-submitted-to-the-hpc" style="color: #0077cc; text-decoration: none;">software works within user space but not submitted to the HPC</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I'm using kraken (https://github.com/DerrickWood/kraken) which depends on jellyfish (https://github.com/gmarcais/Jellyfish). However, it seems that whilst I can run it within my HPC user, it doesn't  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/bash" style="color: #0077cc; text-decoration: none;">bash</a>,                                            <a href="http://stackoverflow.com/tags/cluster-computing" style="color: #0077cc; text-decoration: none;">cluster-computing</a>,                                            <a href="http://stackoverflow.com/tags/hpc" style="color: #0077cc; text-decoration: none;">hpc</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-21 12:13:13Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 21 at 12:13</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42926472/when-bash-jq-parsing-json-return-a-multi-line-array-but-how-can-i-use-this-res" style="color: #0077cc; text-decoration: none;">When bash jq parsing json ,return a multi-line array but, how can I use this result?</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        when I use the command: 
+
+ids=`cat $myfilename | jq -r &quot;[.data[].id]&quot;`
+and return like this:
+
+[
+  &quot;PC_PACX_0017&quot;,
+  &quot;GS_ZGRS_0001&quot;,
+  &quot;PC_PACX_0018&quot;,
+  &quot;GS_ZGRS_0002&quot;,
+  &quot;AB_HXJK_0002&quot;,
+  &quot;...
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/json" style="color: #0077cc; text-decoration: none;">json</a>,                                            <a href="http://stackoverflow.com/tags/bash" style="color: #0077cc; text-decoration: none;">bash</a>,                                            <a href="http://stackoverflow.com/tags/jq" style="color: #0077cc; text-decoration: none;">jq</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-21 11:57:34Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 21 at 11:57</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42926437/how-to-replace-ip-address-from-in-specified-file" style="color: #0077cc; text-decoration: none;">how to Replace IP Address from in specified file</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I have following script to for this it replaces every ip from specified file but logic is bad 
+
+`while getopts i:h: opt
+do
+
+case $opt in
+
+   i) CurrentLocalIpv4=`curl -s  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/linux" style="color: #0077cc; text-decoration: none;">linux</a>,                                            <a href="http://stackoverflow.com/tags/bash" style="color: #0077cc; text-decoration: none;">bash</a>,                                            <a href="http://stackoverflow.com/tags/shell" style="color: #0077cc; text-decoration: none;">shell</a>,                                            <a href="http://stackoverflow.com/tags/sed" style="color: #0077cc; text-decoration: none;">sed</a>,                                            <a href="http://stackoverflow.com/tags/ip" style="color: #0077cc; text-decoration: none;">ip</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-21 11:56:31Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 21 at 11:56</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42926388/can-docker-host-ping-its-containers" style="color: #0077cc; text-decoration: none;">Can docker host ping its containers?</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I'm running docker on mac, my docker is running centos and ifconfig shows eth0 address is &quot;172.17.0.2&quot;.
+
+I tried to ping this 172.17.0.2 in my terminal but failed. So except using &quot;docker run&quot;  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/networking" style="color: #0077cc; text-decoration: none;">networking</a>,                                            <a href="http://stackoverflow.com/tags/docker" style="color: #0077cc; text-decoration: none;">docker</a>,                                            <a href="http://stackoverflow.com/tags/port" style="color: #0077cc; text-decoration: none;">port</a>,                                            <a href="http://stackoverflow.com/tags/ping" style="color: #0077cc; text-decoration: none;">ping</a>,                                            <a href="http://stackoverflow.com/tags/host" style="color: #0077cc; text-decoration: none;">host</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-21 11:53:53Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 21 at 11:53</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42926294/docker-compose-specify-which-interface-will-connect-to-which-network-when-havi" style="color: #0077cc; text-decoration: none;">docker-compose: specify which interface will connect to which network (when having multiple networks)</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        Inside the docker-compose.yaml I define 4 different networks:
+
+networks:
+  vpp-nw:
+  vpp-client:
+  vpp-server:
+  vpp-db:
+which use the following network addresses respectively:
+
+172.20.0.x
+172.21.0.x
+ ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/networking" style="color: #0077cc; text-decoration: none;">networking</a>,                                            <a href="http://stackoverflow.com/tags/docker" style="color: #0077cc; text-decoration: none;">docker</a>,                                            <a href="http://stackoverflow.com/tags/docker-compose" style="color: #0077cc; text-decoration: none;">docker-compose</a>,                                            <a href="http://stackoverflow.com/tags/nic" style="color: #0077cc; text-decoration: none;">nic</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-21 11:50:01Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 21 at 11:50</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+        <tr style="padding: 15px 0;">
+            <td></td>
+            <td valign="top" align="left">
+
+                <p style="color: #444; font-size: 85%;">
+                    <a href="https://stackexchange.com/email/unsubscribe-filter/701415/2047362261?code=lCuO%2bfd%2ffmwz8O%2bISX4E%2fehz5cdGRWlY195k8od2b38%3d" style="color: #0077cc; text-decoration: none;">Unsubscribe from this filter</a> or change your email preferences by visiting
+
+                        your <a href="https://stackexchange.com/users/10489699?tab=subscriptions" style="color: #0077cc; text-decoration: none;">filter subscriptions page on stackexchange.com</a>.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+</td>
+</tr>
+
+                </table>
+                </div>
+                
+                <div style="text-align: center; max-width: 600px;">
+                    <table class="emailfooter" style="margin-left: auto; margin-right: auto; font-size: 95%;">
+                        <tr>
+                            <td>
+                                <p><span style="color:#999; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;"> 
+    Questions? Comments? Let us know on our <a href="https://meta.stackexchange.com">feedback site</a>.
+            If you no longer want to receive mail from Stack Exchange, <a href="https://stackexchange.com/email/manage/1078893/4585631041ce7c205ab6c1caaf0a41e5ee0c444085d2cd145fe6c9bc580c6804">unsubscribe</a> from all stackexchange.com emails.
+</span></p>
+
+<p><span style="color:#999; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;">Stack Exchange Inc. 110 William Street, 28th floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span></span></p>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!-- End of wrapper table -->
+</body>
+</html>

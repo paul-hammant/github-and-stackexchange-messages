@@ -1,0 +1,642 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Exchange</title>
+    <style type="text/css">		
+        #outlook a {padding:0;}
+        body{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; }
+        .ExternalClass {width:100%;}
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 130%;}
+        #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important; background-color:#f0fbff; font-family: Arial, Helvetica, sans-serif;}
+
+        img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+        a img {border:none;}
+        .image_fix {display:block;}
+
+        p {margin: 1em 0;}
+        p.footer { text-align: center; color: #818386; }
+        p.item-excerpt {
+            /*font-size:	13px;*/
+            color: #3d3d3d;
+            margin-top: 5px;
+        }
+        p.item-link {
+            margin: 5px 0 0 0;
+        }
+        span.item-label {
+            color: #aaaaaa;
+            /*font-size: 13px;*/
+        }
+
+        h1, h2, h3, h4, h5, h6 {color: black }
+
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: blue}
+
+        h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+            color: red;
+        }
+
+        h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+            color: purple;
+        }
+
+        table td {border-collapse: collapse;}
+
+        table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+
+        .emailfooter {
+            width: 600px;
+        }
+
+        .emailfooter td {
+            padding-top: 30px;
+        }
+
+        a {color: #0077cc; text-decoration:none;}
+        a:link { color: #0077cc; }
+        a:visited { color: #0077cc; }
+        a:hover { color: #3da5ef; }
+
+        .header-text {
+            /*font-size: 14px;*/
+        }
+
+        #emailcontainer {
+            width: 600px;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            background: #ffffff;
+        }
+		
+        @media only screen and (max-device-width: 480px),
+                only screen and (max-width: 480px) 
+            {
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: black;
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+            #emailcontainer	{
+                width: 90%;
+            }
+            .emailfooter {
+                width: 90%;
+            }
+
+            .header-text {
+                font-size: 100%;
+                line-height: 1.2;
+            } 
+
+            .item-link {
+                font-size: 100%;
+                line-height: 22px;
+            }
+
+            .item-excerpt {
+                line-height: 18px;
+            }           
+        }
+
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px),
+                only screen and (min-width: 768px) and (max-width: 1024px)
+        {
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: blue; /* or whatever your want */
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+            #emailcontainer	{
+                width: 90%;
+            }
+            .emailfooter {
+                width: 90%;
+            }
+
+            .header-text {
+                font-size: 100%;
+                line-height: 1.2;
+            }
+
+            .item-link {
+                font-size: 100%;
+                line-height: 22px;
+            }
+
+            .item-excerpt {
+                line-height: 18px;
+            } 
+        }
+    </style>
+</head>
+<body style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0; line-height: 1.2;">
+    <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 0;padding: 0;background-color: #f0fbff;font-family: Arial, Helvetica, sans-serif;width: 100% !important; height: 100% !important; ">
+        <tr>
+            <td align="center" style="padding-bottom: 40px;border-collapse: collapse;">
+                <!-- logo table -->
+                <table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                    <tr>
+                        <td align="center" style="padding-top: 30px;padding-bottom: 30px;text-align: center;border-collapse: collapse;">
+                            <img src="https://cdn.sstatic.net/stackexchange/img/se-logo.png" alt="Stack Exchange" width="180px" height="43px" style="width:180px; height: 43px; margin-left: auto; margin-right: auto; outline: none; text-decoration: none;-ms-interpolation-mode: bicubic;">
+                        </td>
+                    </tr>
+                </table>
+                
+                <div style="max-width: 600px; border-radius: 3px;">
+                <!-- email body table -->
+                <table id="emailcontainer" cellpadding="0" cellspacing="0" border="0" align="center" style="max-width: 600px; border: 1px solid #eee; border-radius: 3px; background: #ffffff">
+                    <tr>
+<td valign="top" align="center" style="background-color: #2f3552; color: #90d9f5">
+
+<table width="90%">
+    <tbody>
+        <tr>
+            <td style="padding: 15px 0; padding-right: 5px;" valign="middle" align="left">
+                <img height="48" width="48" style="height: 48px; width: 48px;" src="https://sstatic.net/img/icon-rss.png">
+            </td>
+            <td align="left" valign="middle" style="padding: 15px 0; color: white; text-align: left;">
+                <span class="header-text" style="display: block;">
+                    The following 13 items were added to your Stack Exchange <a style="color: #90d9f5; text-decoration: none;" href="https://stackexchange.com/filters/279355/my-filter-1">&quot;My_Filter_1&quot; feed</a>.
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</td>
+</tr>
+
+<tr>
+<td align="center" style="padding-top: 15px; padding-bottom: 25px;">
+
+
+<table width="90%">
+    <tbody>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907690/getting-the-white-screen-while-running-the-code-through-simulator-which-is-devel" style="color: #0077cc; text-decoration: none;">getting the white screen while running the code through simulator which is developed by ionic and angular js</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I am new to ios,the following is the console log while running the code in xcode simulator.The code is developed by using the ionic framework.I want to provide my app in ios also.so i replaced the www  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/ios" style="color: #0077cc; text-decoration: none;">ios</a>,                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/xcode" style="color: #0077cc; text-decoration: none;">xcode</a>,                                            <a href="http://stackoverflow.com/tags/cordova" style="color: #0077cc; text-decoration: none;">cordova</a>,                                            <a href="http://stackoverflow.com/tags/ionic-framework" style="color: #0077cc; text-decoration: none;">ionic-framework</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:32:17Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:32</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907515/angularjs-cancelling-a-http-request-from-a-service-that-returns-a-promise" style="color: #0077cc; text-decoration: none;">AngularJS - Cancelling a HTTP Request From a Service That Returns a Promise</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I have a service method that looks like:
+
+this.myServiceFunction = function(){
+    var deferred = $q.defer();
+    $http({
+        method: 'GET',
+        url: 'domain/myendpoint'
+    })
+        ....
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/angular-promise" style="color: #0077cc; text-decoration: none;">angular-promise</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:24:36Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:24</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907491/angular-routes-are-not-working" style="color: #0077cc; text-decoration: none;">Angular Routes are not working</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        app.js I am trying to setup routes here but It is not working and I have no idea why its not working , kindly look into this issue.When I click on page1 the url should be /employees but it takes ...
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/javascript" style="color: #0077cc; text-decoration: none;">javascript</a>,                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/angularjs-directive" style="color: #0077cc; text-decoration: none;">angularjs-directive</a>,                                            <a href="http://stackoverflow.com/tags/angular-ui-router" style="color: #0077cc; text-decoration: none;">angular-ui-router</a>,                                            <a href="http://stackoverflow.com/tags/angular-routing" style="color: #0077cc; text-decoration: none;">angular-routing</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:23:24Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:23</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907453/how-can-i-restrict-input-field-to-enter-upto-100" style="color: #0077cc; text-decoration: none;">How can I restrict input field to enter upto 100</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I used min, max attributes
+
+&amp;lt;input min=&quot;1&quot; max=&quot;100&quot; type=&quot;number&quot;&amp;gt;
+Above input field is showing error on mouse over. i.e., &quot;please select value that is no more than 100.&quot;
+
+I want to restrict  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/html" style="color: #0077cc; text-decoration: none;">html</a>,                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:21:55Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:21</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907382/window-print-does-not-work-in-ie-11" style="color: #0077cc; text-decoration: none;">window.print() does not work in IE 11</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I have an angular js app and for a print functionality I am opening an html page using the window.open method.
+
+ public openNewWindow(html: string, title: string) {
+    var popupWin = window.open('',  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/javascript" style="color: #0077cc; text-decoration: none;">javascript</a>,                                            <a href="http://stackoverflow.com/tags/html" style="color: #0077cc; text-decoration: none;">html</a>,                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/internet-explorer" style="color: #0077cc; text-decoration: none;">internet-explorer</a>,                                            <a href="http://stackoverflow.com/tags/printing-web-page" style="color: #0077cc; text-decoration: none;">printing-web-page</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:19:16Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:19</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907365/how-to-select-ng-tab-with-ngfor-in-ng-bootstrap" style="color: #0077cc; text-decoration: none;">How to select ng-tab with ngFor in ng-bootstrap</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I get parameter from route so I can activate the corresponding tab.
+
+I use ngFor to generate ng-tab, because the data is come from database. Here is the app.component.pug:
+
+ngb-tabset(#t=&quot;ngbTabset&quot;)
+  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/angular2" style="color: #0077cc; text-decoration: none;">angular2</a>,                                            <a href="http://stackoverflow.com/tags/ng-bootstrap" style="color: #0077cc; text-decoration: none;">ng-bootstrap</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:18:46Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:18</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907355/angularjs-2-x-and-existing-mvc-4-x-intergration-fail-must-i-have-node-js" style="color: #0077cc; text-decoration: none;">AngularJS 2.x and Existing MVC 4.x intergration fail...must I have node.js?</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        Being new to Angular I have completed several PluralSight courses and now am wanting to flex my ability with an integration scenario.
+
+I have a pre-existing MVC 4 site. I have created a new Area ...
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/javascript" style="color: #0077cc; text-decoration: none;">javascript</a>,                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/asp.net-mvc-4" style="color: #0077cc; text-decoration: none;">asp.net-mvc-4</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:18:07Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:18</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907270/is-it-possible-to-change-the-attribute-value-of-a-component-in-angular-1" style="color: #0077cc; text-decoration: none;">Is it possible to change the attribute value of a component in Angular 1?</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I want to change the attribute value of a component in Angular 1. Here is my code:
+
+(function(){
+  'use strict';
+
+  const calendar = {
+    bindings: {
+      events: '='
+    },
+    controller: function  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:13:38Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:13</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907257/how-can-i-install-typings-folder-angularjs1-5-typescript" style="color: #0077cc; text-decoration: none;">How can I install typings folder angularjs1.5/typescript?</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I'm doing project with angularjs1.5 and typescript, need to install &quot;angularjs/angular.d.ts&quot; and &quot;angularjs/angular-route.d.ts&quot;  files. I installed tsd  globally, but after &quot;tsd install angular&quot; ...
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/typescript" style="color: #0077cc; text-decoration: none;">typescript</a>,                                            <a href="http://stackoverflow.com/tags/npm" style="color: #0077cc; text-decoration: none;">npm</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:13:09Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:13</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907251/css-shows-overwritten-styles-for-a-split-second" style="color: #0077cc; text-decoration: none;">CSS shows overwritten styles for a split second</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        Currently, I am using a directive from a third-party library for a UI toggle button. I changed the background color and left/right positions of the toggle button a bit to meet my business ...
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/css" style="color: #0077cc; text-decoration: none;">css</a>,                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/css3" style="color: #0077cc; text-decoration: none;">css3</a>,                                            <a href="http://stackoverflow.com/tags/sass" style="color: #0077cc; text-decoration: none;">sass</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:12:52Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:12</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907244/add-directive-and-call-controller-function-from-another-directive" style="color: #0077cc; text-decoration: none;">Add directive and call controller function from another directive</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        directive('myDirective', function ($compile) {
+return {
+    restrict: 'A',
+    scope: {
+        myData: &quot;=&quot;,
+    },
+    terminal:true,
+    priority: 200,
+    link: function (scope, elm, attr) {
+        ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/javascript" style="color: #0077cc; text-decoration: none;">javascript</a>,                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>,                                            <a href="http://stackoverflow.com/tags/angularjs-directive" style="color: #0077cc; text-decoration: none;">angularjs-directive</a>,                                            <a href="http://stackoverflow.com/tags/angularjs-scope" style="color: #0077cc; text-decoration: none;">angularjs-scope</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:12:33Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:12</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907184/angular-state-go-with-the-same-stateparams" style="color: #0077cc; text-decoration: none;">angular state.go with the same stateParams</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I have an angular app where I use $state.go('state_name', stateParams).
+
+The button which triggers state.go event is always available at the page while url changes depending on stateParams.
+
+...
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:08:54Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:08</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; padding-right: 5px; border-bottom: 1px solid #eeeeee;" valign="top" align="left">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png" alt="Stack Overflow" width="48" height="48" style="width: 48px; height: 48px;">
+                </td>
+                <td align="left" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px; border-bottom: 1px solid #eeeeee">
+                    <p class="item-link" style="margin: 5px 0 0 0; font-size: 115%;">
+                        <a href="http://stackoverflow.com/questions/42907146/random-user-generator-api-get-user-by-id-angular-js" style="color: #0077cc; text-decoration: none;">Random User Generator API - get user by ID Angular JS</a>
+                    </p>
+                    <p class="item-excerpt" style="font-size: 100%; color: #3d3d3d; margin-top: 5px">
+                        I am new to Angular, but managed to make an Ajax-call and print out users from Random User Generator API in a list view.
+Now I want to make a detailed view while clicked on a user.
+In my HTML I make a  ... 
+                    </p>
+                    <p class="item-label">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <span class="item-label" style="color: #aaaaaa; font-size: 90%;">
+                                        tagged:
+
+                                            <a href="http://stackoverflow.com/tags/javascript" style="color: #0077cc; text-decoration: none;">javascript</a>,                                            <a href="http://stackoverflow.com/tags/angularjs" style="color: #0077cc; text-decoration: none;">angularjs</a>                                    </span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span title="2017-03-20 15:06:51Z" class="item-label" style="color: #aaaaaa; font-size: 90%;">Mar 20 at 15:06</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+        <tr style="padding: 15px 0;">
+            <td></td>
+            <td valign="top" align="left">
+
+                <p style="color: #444; font-size: 85%;">
+                    <a href="https://stackexchange.com/email/unsubscribe-filter/701414/2075496943?code=UmFrK%2fVVj9dbKouynpmtZxGTcoWz8iyj8x679NMG4ng%3d" style="color: #0077cc; text-decoration: none;">Unsubscribe from this filter</a> or change your email preferences by visiting
+
+                        your <a href="https://stackexchange.com/users/10489699?tab=subscriptions" style="color: #0077cc; text-decoration: none;">filter subscriptions page on stackexchange.com</a>.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+</td>
+</tr>
+
+                </table>
+                </div>
+                
+                <div style="text-align: center; max-width: 600px;">
+                    <table class="emailfooter" style="margin-left: auto; margin-right: auto; font-size: 95%;">
+                        <tr>
+                            <td>
+                                <p><span style="color:#999; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;"> 
+    Questions? Comments? Let us know on our <a href="https://meta.stackexchange.com">feedback site</a>.
+            If you no longer want to receive mail from Stack Exchange, <a href="https://stackexchange.com/email/manage/1078893/4585631041ce7c205ab6c1caaf0a41e5ee0c444085d2cd145fe6c9bc580c6804">unsubscribe</a> from all stackexchange.com emails.
+</span></p>
+
+<p><span style="color:#999; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;">Stack Exchange Inc. 110 William Street, 28th floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span></span></p>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!-- End of wrapper table -->
+</body>
+</html>

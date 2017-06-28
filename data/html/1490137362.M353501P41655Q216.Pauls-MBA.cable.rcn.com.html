@@ -1,0 +1,172 @@
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><p=
+>When I use the longer version in the object is the same error but an objec=
+t without functions works and it does not make sense for me. I never heard =
+that you can't use objects for providers. And it has no errors when it comp=
+iles second time.</p>
+<p>This works:</p>
+<div class=3D"highlight highlight-source-ts"><pre><span class=3D"pl-k">impo=
+rt</span> { <span class=3D"pl-smi">BrowserModule</span> } <span class=3D"pl=
+-k">from</span> <span class=3D"pl-s"><span class=3D"pl-pds">'</span>@angula=
+r/platform-browser<span class=3D"pl-pds">'</span></span>;
+<span class=3D"pl-k">import</span> { <span class=3D"pl-smi">NgModule</span>=
+ } <span class=3D"pl-k">from</span> <span class=3D"pl-s"><span class=3D"pl-=
+pds">'</span>@angular/core<span class=3D"pl-pds">'</span></span>;
+<span class=3D"pl-k">import</span> { <span class=3D"pl-smi">FormsModule</sp=
+an> } <span class=3D"pl-k">from</span> <span class=3D"pl-s"><span class=3D"=
+pl-pds">'</span>@angular/forms<span class=3D"pl-pds">'</span></span>;
+<span class=3D"pl-k">import</span> { <span class=3D"pl-smi">HttpModule</spa=
+n> } <span class=3D"pl-k">from</span> <span class=3D"pl-s"><span class=3D"p=
+l-pds">'</span>@angular/http<span class=3D"pl-pds">'</span></span>;
+
+<span class=3D"pl-k">import</span> { <span class=3D"pl-smi">AppComponent</s=
+pan> } <span class=3D"pl-k">from</span> <span class=3D"pl-s"><span class=3D=
+"pl-pds">'</span>./app.component<span class=3D"pl-pds">'</span></span>;
+
+<span class=3D"pl-k">export</span> <span class=3D"pl-k">const</span> Logger=
+ <span class=3D"pl-k">=3D</span> {
+  info: <span class=3D"pl-c1">false</span>,
+  error: <span class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>console.e=
+rror<span class=3D"pl-pds">&quot;</span></span>,
+  debug: <span class=3D"pl-c1">false</span>,
+};
+<span class=3D"pl-k">export</span> <span class=3D"pl-k">const</span> AppLog=
+ger <span class=3D"pl-k">=3D</span> {
+  info: <span class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>console.lo=
+g<span class=3D"pl-pds">&quot;</span></span>,
+  erro: <span class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>console.er=
+ror<span class=3D"pl-pds">&quot;</span></span>,
+  debug: <span class=3D"pl-c1">false</span>,
+};
+
+@<span class=3D"pl-en">NgModule</span>({
+  declarations: [
+    <span class=3D"pl-smi">AppComponent</span>
+  ],
+  imports: [
+    <span class=3D"pl-smi">BrowserModule</span>,
+    <span class=3D"pl-smi">FormsModule</span>,
+    <span class=3D"pl-smi">HttpModule</span>
+  ],
+  providers: [
+    { provide: <span class=3D"pl-smi">Logger</span>, useValue: <span class=
+=3D"pl-smi">AppLogger</span> }
+  ],
+  bootstrap: [<span class=3D"pl-smi">AppComponent</span>]
+})
+<span class=3D"pl-k">export</span> <span class=3D"pl-k">class</span> <span =
+class=3D"pl-en">AppModule</span> { }</pre></div>
+<p>And this not:</p>
+<div class=3D"highlight highlight-source-ts"><pre><span class=3D"pl-k">impo=
+rt</span> { <span class=3D"pl-smi">BrowserModule</span> } <span class=3D"pl=
+-k">from</span> <span class=3D"pl-s"><span class=3D"pl-pds">'</span>@angula=
+r/platform-browser<span class=3D"pl-pds">'</span></span>;
+<span class=3D"pl-k">import</span> { <span class=3D"pl-smi">NgModule</span>=
+ } <span class=3D"pl-k">from</span> <span class=3D"pl-s"><span class=3D"pl-=
+pds">'</span>@angular/core<span class=3D"pl-pds">'</span></span>;
+<span class=3D"pl-k">import</span> { <span class=3D"pl-smi">FormsModule</sp=
+an> } <span class=3D"pl-k">from</span> <span class=3D"pl-s"><span class=3D"=
+pl-pds">'</span>@angular/forms<span class=3D"pl-pds">'</span></span>;
+<span class=3D"pl-k">import</span> { <span class=3D"pl-smi">HttpModule</spa=
+n> } <span class=3D"pl-k">from</span> <span class=3D"pl-s"><span class=3D"p=
+l-pds">'</span>@angular/http<span class=3D"pl-pds">'</span></span>;
+
+<span class=3D"pl-k">import</span> { <span class=3D"pl-smi">AppComponent</s=
+pan> } <span class=3D"pl-k">from</span> <span class=3D"pl-s"><span class=3D=
+"pl-pds">'</span>./app.component<span class=3D"pl-pds">'</span></span>;
+
+<span class=3D"pl-k">export</span> <span class=3D"pl-k">const</span> Logger=
+ <span class=3D"pl-k">=3D</span> {
+  <span class=3D"pl-en">info</span>: () <span class=3D"pl-k">=3D&gt;</span>=
+ {},
+  <span class=3D"pl-en">error</span>: <span class=3D"pl-v">message</span> <=
+span class=3D"pl-k">=3D&gt;</span> <span class=3D"pl-c1">console</span>.<sp=
+an class=3D"pl-c1">error</span>(<span class=3D"pl-smi">message</span>),
+  <span class=3D"pl-en">debug</span>: () <span class=3D"pl-k">=3D&gt;</span=
+> {},
+};
+<span class=3D"pl-k">export</span> <span class=3D"pl-k">const</span> AppLog=
+ger <span class=3D"pl-k">=3D</span> {
+  <span class=3D"pl-en">info</span>: <span class=3D"pl-v">message</span> <s=
+pan class=3D"pl-k">=3D&gt;</span> <span class=3D"pl-c1">console</span>.<spa=
+n class=3D"pl-c1">log</span>(<span class=3D"pl-smi">message</span>),
+  <span class=3D"pl-en">erro</span>: <span class=3D"pl-v">message</span> <s=
+pan class=3D"pl-k">=3D&gt;</span> <span class=3D"pl-c1">console</span>.<spa=
+n class=3D"pl-c1">error</span>(<span class=3D"pl-smi">message</span>),
+  <span class=3D"pl-en">debug</span>: () <span class=3D"pl-k">=3D&gt;</span=
+> {},
+};
+
+@<span class=3D"pl-en">NgModule</span>({
+  declarations: [
+    <span class=3D"pl-smi">AppComponent</span>
+  ],
+  imports: [
+    <span class=3D"pl-smi">BrowserModule</span>,
+    <span class=3D"pl-smi">FormsModule</span>,
+    <span class=3D"pl-smi">HttpModule</span>
+  ],
+  providers: [
+    { provide: <span class=3D"pl-smi">Logger</span>, useValue: <span class=
+=3D"pl-smi">AppLogger</span> }
+  ],
+  bootstrap: [<span class=3D"pl-smi">AppComponent</span>]
+})
+<span class=3D"pl-k">export</span> <span class=3D"pl-k">class</span> <span =
+class=3D"pl-en">AppModule</span> { }</pre></div>
+
+<p style=3D"font-size:small;-webkit-text-size-adjust:none;color:#666;">=E2=
+=80=94<br>You are receiving this because you are subscribed to this thread.=
+<br>Reply to this email directly, <a href=3D"https://github.com/angular/ang=
+ular/issues/15287#issuecomment-287620337">view it on GitHub</a>, or <a href=
+=3D"https://github.com/notifications/unsubscribe-auth/AZR1R-ggAOi3qR9EW2Fft=
+oa4g21WXiPXks5rnTwJgaJpZM4MhtZe">mute the thread</a>.<img alt=3D"" height=
+=3D"1" src=3D"https://github.com/notifications/beacon/AZR1RwSIl3aOMr6005xfo=
+KfsUgMQ4Razks5rnTwJgaJpZM4MhtZe.gif" width=3D"1"></p>
+<div itemscope=3D"" itemtype=3D"http://schema.org/EmailMessage">
+<div itemprop=3D"action" itemscope=3D"" itemtype=3D"http://schema.org/ViewA=
+ction">
+  <link itemprop=3D"url" href=3D"https://github.com/angular/angular/issues/=
+15287#issuecomment-287620337"><!-- </link> -->
+  <meta itemprop=3D"name" content=3D"View Issue"><!-- </meta> -->
+</div>
+<meta itemprop=3D"description" content=3D"View this Issue on GitHub"><!-- <=
+/meta> -->
+</div>
+
+<script type=3D"application/json" data-scope=3D"inboxmarkup">{"api_version"=
+:"1.0","publisher":{"api_key":"05dde50f1d1a384dd78767c55493e4bb","name":"Gi=
+tHub"},"entity":{"external_key":"github/angular/angular","title":"angular/a=
+ngular","subtitle":"GitHub repository","main_image_url":"https://cloud.gith=
+ubusercontent.com/assets/143418/17495839/a5054eac-5d88-11e6-95fc-7290892c7b=
+b5.png","avatar_image_url":"https://cloud.githubusercontent.com/assets/1434=
+18/15842166/7c72db34-2c0b-11e6-9aed-b52498112777.png","action":{"name":"Ope=
+n in GitHub","url":"https://github.com/angular/angular"}},"updates":{"snipp=
+ets":[{"icon":"PERSON","message":"@tflori in #15287: When I use the longer =
+version in the object is the same error but an object without functions wor=
+ks and it does not make sense for me. I never heard that you can't use obje=
+cts for providers. And it has no errors when it compiles second time.\r\n\r=
+\nThis works:\r\n\r\n```ts\r\nimport { BrowserModule } from '@angular/platf=
+orm-browser';\r\nimport { NgModule } from '@angular/core';\r\nimport { Form=
+sModule } from '@angular/forms';\r\nimport { HttpModule } from '@angular/ht=
+tp';\r\n\r\nimport { AppComponent } from './app.component';\r\n\r\nexport c=
+onst Logger =3D {\r\n  info: false,\r\n  error: \"console.error\",\r\n  deb=
+ug: false,\r\n};\r\nexport const AppLogger =3D {\r\n  info: \"console.log\"=
+,\r\n  erro: \"console.error\",\r\n  debug: false,\r\n};\r\n\r\n@NgModule({=
+\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    Br=
+owserModule,\r\n    FormsModule,\r\n    HttpModule\r\n  ],\r\n  providers: =
+[\r\n    { provide: Logger, useValue: AppLogger }\r\n  ],\r\n  bootstrap: [=
+AppComponent]\r\n})\r\nexport class AppModule { }\r\n```\r\n\r\nAnd this no=
+t:\r\n```ts\r\nimport { BrowserModule } from '@angular/platform-browser';\r=
+\nimport { NgModule } from '@angular/core';\r\nimport { FormsModule } from =
+'@angular/forms';\r\nimport { HttpModule } from '@angular/http';\r\n\r\nimp=
+ort { AppComponent } from './app.component';\r\n\r\nexport const Logger =3D=
+ {\r\n  info: () =3D\u003e {},\r\n  error: message =3D\u003e console.error(=
+message),\r\n  debug: () =3D\u003e {},\r\n};\r\nexport const AppLogger =3D =
+{\r\n  info: message =3D\u003e console.log(message),\r\n  erro: message =3D=
+\u003e console.error(message),\r\n  debug: () =3D\u003e {},\r\n};\r\n\r\n@N=
+gModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\=
+r\n    BrowserModule,\r\n    FormsModule,\r\n    HttpModule\r\n  ],\r\n  pr=
+oviders: [\r\n    { provide: Logger, useValue: AppLogger }\r\n  ],\r\n  boo=
+tstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n```"}],"actio=
+n":{"name":"View Issue","url":"https://github.com/angular/angular/issues/15=
+287#issuecomment-287620337"}}}</script>=

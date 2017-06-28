@@ -1,0 +1,51 @@
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><p=
+><a href=3D"https://github.com/DzmitryShylovich" class=3D"user-mention">@Dz=
+mitryShylovich</a> this error message cannot be reproduced in plunkr really=
+. It only applies to transpiled code.</p>
+<p>One thing I notcied: The error only applies when there is routing includ=
+ed. So, steps for reproducing are:</p>
+<ul>
+<li><code>ng new</code></li>
+<li>add a standard RouterModule with &gt;=3D1 route</li>
+<li><code>ng build</code></li>
+<li>open <code>index.html</code> in browser (with <code>&lt;base base href=
+=3D&quot;&quot;&gt;</code>) (hard file, no http server)</li>
+</ul>
+<p>-&gt; error: <code>SecurityError: The operation is insecure.</code></p>
+
+<p style=3D"font-size:small;-webkit-text-size-adjust:none;color:#666;">=E2=
+=80=94<br>You are receiving this because you are subscribed to this thread.=
+<br>Reply to this email directly, <a href=3D"https://github.com/angular/ang=
+ular/issues/15279#issuecomment-287587542">view it on GitHub</a>, or <a href=
+=3D"https://github.com/notifications/unsubscribe-auth/AZR1R-uNwMg6hzDoYlVye=
+xrxqNqsplS7ks5rnIX4gaJpZM4MhdVE">mute the thread</a>.<img alt=3D"" height=
+=3D"1" src=3D"https://github.com/notifications/beacon/AZR1R0LHyZZ1qeit9-oUb=
+ITYEoAJDW7Sks5rnIX4gaJpZM4MhdVE.gif" width=3D"1"></p>
+<div itemscope=3D"" itemtype=3D"http://schema.org/EmailMessage">
+<div itemprop=3D"action" itemscope=3D"" itemtype=3D"http://schema.org/ViewA=
+ction">
+  <link itemprop=3D"url" href=3D"https://github.com/angular/angular/issues/=
+15279#issuecomment-287587542"><!-- </link> -->
+  <meta itemprop=3D"name" content=3D"View Issue"><!-- </meta> -->
+</div>
+<meta itemprop=3D"description" content=3D"View this Issue on GitHub"><!-- <=
+/meta> -->
+</div>
+
+<script type=3D"application/json" data-scope=3D"inboxmarkup">{"api_version"=
+:"1.0","publisher":{"api_key":"05dde50f1d1a384dd78767c55493e4bb","name":"Gi=
+tHub"},"entity":{"external_key":"github/angular/angular","title":"angular/a=
+ngular","subtitle":"GitHub repository","main_image_url":"https://cloud.gith=
+ubusercontent.com/assets/143418/17495839/a5054eac-5d88-11e6-95fc-7290892c7b=
+b5.png","avatar_image_url":"https://cloud.githubusercontent.com/assets/1434=
+18/15842166/7c72db34-2c0b-11e6-9aed-b52498112777.png","action":{"name":"Ope=
+n in GitHub","url":"https://github.com/angular/angular"}},"updates":{"snipp=
+ets":[{"icon":"PERSON","message":"@phil294 in #15279: @DzmitryShylovich thi=
+s error message cannot be reproduced in plunkr really. It only applies to t=
+ranspiled code. \r\n\r\nOne thing I notcied: The error only applies when th=
+ere is routing included. So, steps for reproducing are:\r\n\r\n- `ng new` \=
+r\n- add a standard RouterModule with \u003e=3D1 route\r\n- `ng build`\r\n-=
+ open `index.html` in browser (with `\u003cbase base href=3D\"\"\u003e`) (h=
+ard file, no http server)\r\n\r\n-\u003e error: ` SecurityError: The operat=
+ion is insecure.`"}],"action":{"name":"View Issue","url":"https://github.co=
+m/angular/angular/issues/15279#issuecomment-287587542"}}}</script>=

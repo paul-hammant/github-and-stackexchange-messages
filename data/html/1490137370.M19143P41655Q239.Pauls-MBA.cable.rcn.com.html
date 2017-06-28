@@ -1,0 +1,108 @@
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><p=
+><strong>I'm submitting a</strong></p>
+<ul>
+<li>Bug Report</li>
+</ul>
+<blockquote>
+<p>Issue still appears after <a href=3D"https://github.com/angular/angular/=
+pull/15215" class=3D"issue-link js-issue-link" data-url=3D"https://github.c=
+om/angular/angular/issues/15215" data-id=3D"214838667" data-error-text=3D"F=
+ailed to load issue title" data-permission-text=3D"Issue title is private">=
+#15215</a> being merged</p>
+</blockquote>
+<p><strong>Current behavior</strong></p>
+<p>Metadata file when using <code>flatModuleOutFile</code> is empty on Wind=
+ows</p>
+<div class=3D"highlight highlight-source-json"><pre>{<span class=3D"pl-s"><=
+span class=3D"pl-pds">&quot;</span>__symbolic<span class=3D"pl-pds">&quot;<=
+/span></span>:<span class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>modu=
+le<span class=3D"pl-pds">&quot;</span></span>,<span class=3D"pl-s"><span cl=
+ass=3D"pl-pds">&quot;</span>version<span class=3D"pl-pds">&quot;</span></sp=
+an>:<span class=3D"pl-c1">3</span>,<span class=3D"pl-s"><span class=3D"pl-p=
+ds">&quot;</span>metadata<span class=3D"pl-pds">&quot;</span></span>:{},<sp=
+an class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>importAs<span class=
+=3D"pl-pds">&quot;</span></span>:<span class=3D"pl-s"><span class=3D"pl-pds=
+">&quot;</span>@angular/material<span class=3D"pl-pds">&quot;</span></span>=
+}</pre></div>
+<p><strong>Expected behavior</strong></p>
+<p>Metadata file should contain <code>metadata</code> as for Linux and Mac =
+OS.</p>
+<div class=3D"highlight highlight-source-json"><pre>{<span class=3D"pl-s"><=
+span class=3D"pl-pds">&quot;</span>__symbolic<span class=3D"pl-pds">&quot;<=
+/span></span>:<span class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>modu=
+le<span class=3D"pl-pds">&quot;</span></span>,<span class=3D"pl-s"><span cl=
+ass=3D"pl-pds">&quot;</span>version<span class=3D"pl-pds">&quot;</span></sp=
+an>:<span class=3D"pl-c1">3</span>,<span class=3D"pl-s"><span class=3D"pl-p=
+ds">&quot;</span>metadata<span class=3D"pl-pds">&quot;</span></span>:{<span=
+ class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>TestComponent<span clas=
+s=3D"pl-pds">&quot;</span></span>:{<span class=3D"pl-s"><span class=3D"pl-p=
+ds">&quot;</span>__symbolic<span class=3D"pl-pds">&quot;</span></span>:<spa=
+n class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>class<span class=3D"pl=
+-pds">&quot;</span></span>,<span class=3D"pl-s"><span class=3D"pl-pds">&quo=
+t;</span>decorators<span class=3D"pl-pds">&quot;</span></span>:[{<span clas=
+s=3D"pl-s"><span class=3D"pl-pds">&quot;</span>__symbolic<span class=3D"pl-=
+pds">&quot;</span></span>:<span class=3D"pl-s"><span class=3D"pl-pds">&quot=
+;</span>call<span class=3D"pl-pds">&quot;</span></span>,<span class=3D"pl-s=
+"><span class=3D"pl-pds">&quot;</span>expression<span class=3D"pl-pds">&quo=
+t;</span></span>:{<span class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>=
+__symbolic<span class=3D"pl-pds">&quot;</span></span>:<span class=3D"pl-s">=
+<span class=3D"pl-pds">&quot;</span>reference<span class=3D"pl-pds">&quot;<=
+/span></span>,<span class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>modu=
+le<span class=3D"pl-pds">&quot;</span></span>:<span class=3D"pl-s"><span cl=
+ass=3D"pl-pds">&quot;</span>@angular/core<span class=3D"pl-pds">&quot;</spa=
+n></span>,<span class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>name<spa=
+n class=3D"pl-pds">&quot;</span></span>:<span class=3D"pl-s"><span class=3D=
+"pl-pds">&quot;</span>Component<span class=3D"pl-pds">&quot;</span></span>}=
+,<span class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>arguments<span cl=
+ass=3D"pl-pds">&quot;</span></span>:[{<span class=3D"pl-s"><span class=3D"p=
+l-pds">&quot;</span>selector<span class=3D"pl-pds">&quot;</span></span>:<sp=
+an class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>test-component<span c=
+lass=3D"pl-pds">&quot;</span></span>,<span class=3D"pl-s"><span class=3D"pl=
+-pds">&quot;</span>template<span class=3D"pl-pds">&quot;</span></span>:<spa=
+n class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>&lt;span&gt;Test&lt;/s=
+pan&gt;<span class=3D"pl-pds">&quot;</span></span>}]}],<span class=3D"pl-s"=
+><span class=3D"pl-pds">&quot;</span>members<span class=3D"pl-pds">&quot;</=
+span></span>:{}}},<span class=3D"pl-s"><span class=3D"pl-pds">&quot;</span>=
+importAs<span class=3D"pl-pds">&quot;</span></span>:<span class=3D"pl-s"><s=
+pan class=3D"pl-pds">&quot;</span>@angular/material<span class=3D"pl-pds">&=
+quot;</span></span>}</pre></div>
+<p><strong>Minimal reproduction of the problem with instructions</strong><b=
+r>
+<a href=3D"https://github.com/DevVersion/ng-compiler-cli-test">https://gith=
+ub.com/DevVersion/ng-compiler-cli-test</a></p>
+<p><strong>Please tell us about your environment:</strong></p>
+<p>Using the latest version (Github builds). And since <code>@angular/tsc-w=
+rapped</code> is not bound to the <code>0.0.0-PLACEHOLDER</code>, there is =
+a script that injects the latest version of it.</p>
+<p><strong>Node (for AoT issues):</strong> v6.10.0</p>
+
+<p style=3D"font-size:small;-webkit-text-size-adjust:none;color:#666;">=E2=
+=80=94<br>You are receiving this because you are subscribed to this thread.=
+<br>Reply to this email directly, <a href=3D"https://github.com/angular/ang=
+ular/issues/15289">view it on GitHub</a>, or <a href=3D"https://github.com/=
+notifications/unsubscribe-auth/AZR1RyCE1ZjbAkbDqLmdNwtseNi6Ktxrks5rnVkigaJp=
+ZM4MhyVk">mute the thread</a>.<img alt=3D"" height=3D"1" src=3D"https://git=
+hub.com/notifications/beacon/AZR1RxXSHKZH4rAWtLph2S9kOhMSO0RTks5rnVkigaJpZM=
+4MhyVk.gif" width=3D"1"></p>
+<div itemscope=3D"" itemtype=3D"http://schema.org/EmailMessage">
+<div itemprop=3D"action" itemscope=3D"" itemtype=3D"http://schema.org/ViewA=
+ction">
+  <link itemprop=3D"url" href=3D"https://github.com/angular/angular/issues/=
+15289"><!-- </link> -->
+  <meta itemprop=3D"name" content=3D"View Issue"><!-- </meta> -->
+</div>
+<meta itemprop=3D"description" content=3D"View this Issue on GitHub"><!-- <=
+/meta> -->
+</div>
+
+<script type=3D"application/json" data-scope=3D"inboxmarkup">{"api_version"=
+:"1.0","publisher":{"api_key":"05dde50f1d1a384dd78767c55493e4bb","name":"Gi=
+tHub"},"entity":{"external_key":"github/angular/angular","title":"angular/a=
+ngular","subtitle":"GitHub repository","main_image_url":"https://cloud.gith=
+ubusercontent.com/assets/143418/17495839/a5054eac-5d88-11e6-95fc-7290892c7b=
+b5.png","avatar_image_url":"https://cloud.githubusercontent.com/assets/1434=
+18/15842166/7c72db34-2c0b-11e6-9aed-b52498112777.png","action":{"name":"Ope=
+n in GitHub","url":"https://github.com/angular/angular"}},"updates":{"snipp=
+ets":[{"icon":"DESCRIPTION","message":"ngc: empty metadata on windows (#152=
+89)"}],"action":{"name":"View Issue","url":"https://github.com/angular/angu=
+lar/issues/15289"}}}</script>=

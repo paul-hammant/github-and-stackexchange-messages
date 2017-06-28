@@ -1,0 +1,42 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><p><b>@GauthamGoli</b> commented on this pull request.</p>
+
+<hr>
+
+<p>In <a href="https://github.com/Homebrew/brew/pull/2242#discussion_r106797769">Library/Homebrew/rubocops/formula_desc_cop.rb</a>:</p>
+<pre style="color:#555">&gt; @@ -0,0 &#43;1,78 @@
+&#43;require_relative &quot;./extend/formula_cop&quot;
+&#43;require_relative &quot;../extend/string&quot;
+&#43;
+&#43;module RuboCop
+&#43;  module Cop
+&#43;    module Homebrew
+&#43;      # This cop audits `desc` in Formulae
+&#43;      #
+&#43;      # - Checks for existence of `desc`
+&#43;      # - Checks if size of `desc` &gt; 80
+&#43;      # - Checks if `desc` begins with an article
+&#43;      # - Checks for correct usage of `command-line` in `desc`
+&#43;      # - Checks if `desc` contains the formula name
+&#43;      class FormulaDesc &lt; FormulaCop
+&#43;        def audit_formula(node, class_node, _parent_class_node, body)
+</pre>
+<p>While trying to implement the above I faced an issue. Just by having</p>
+<div class="highlight highlight-source-ruby"><pre><span class="pl-k">if</span> desc <span class="pl-k">=~</span> <span class="pl-sr"><span class="pl-pds">/</span><span class="pl-sr">(command ?line)</span><span class="pl-pds">/i</span></span>
+  problem <span class="pl-s"><span class="pl-pds">&quot;</span>Description should use <span class="pl-cce">\&quot;</span>command-line<span class="pl-cce">\&quot;</span> instead of <span class="pl-cce">\&quot;</span><span class="pl-pse">#{</span><span class="pl-s1"><span class="pl-smi">$1</span></span><span class="pl-pse"><span class="pl-s1">}</span></span><span class="pl-cce">\&quot;</span><span class="pl-pds">&quot;</span></span>
+<span class="pl-k">end</span></pre></div>
+<p>its difficult to set all the instance variables required for pinpointing the <code>source_range</code> of the style violation. So I added a method <code>check_regex_match</code>. Now the code looks like</p>
+<div class="highlight highlight-source-ruby"><pre>match_object <span class="pl-k">=</span> check_regex_match(desc, <span class="pl-sr"><span class="pl-pds">/</span><span class="pl-sr">(command ?line)</span><span class="pl-pds">/i</span></span>)
+<span class="pl-k">if</span> match_object
+  problem <span class="pl-s"><span class="pl-pds">&quot;</span>Description should use <span class="pl-cce">\&quot;</span>command-line<span class="pl-cce">\&quot;</span> instead of <span class="pl-cce">\&quot;</span><span class="pl-pse">#{</span><span class="pl-s1">match_object</span><span class="pl-pse"><span class="pl-s1">}</span></span><span class="pl-cce">\&quot;</span><span class="pl-pds">&quot;</span></span>
+<span class="pl-k">end</span></pre></div>
+
+<p style="font-size:small;-webkit-text-size-adjust:none;color:#666;">—<br>You are receiving this because you are subscribed to this thread.<br>Reply to this email directly, <a href="https://github.com/Homebrew/brew/pull/2242#discussion_r106797769">view it on GitHub</a>, or <a href="https://github.com/notifications/unsubscribe-auth/AZR1R4GDGXKGFUmGTao1R9OtauXoW18aks5rnK4ugaJpZM4MQSV5">mute the thread</a>.<img alt="" height="1" src="https://github.com/notifications/beacon/AZR1R59TaaF7iD49rVXXVJ8lnEPVDHNAks5rnK4ugaJpZM4MQSV5.gif" width="1"></p>
+<div itemscope="" itemtype="http://schema.org/EmailMessage">
+<div itemprop="action" itemscope="" itemtype="http://schema.org/ViewAction">
+  <link itemprop="url" href="https://github.com/Homebrew/brew/pull/2242#discussion_r106797769"><!-- </link> -->
+  <meta itemprop="name" content="View Pull Request"><!-- </meta> -->
+</div>
+<meta itemprop="description" content="View this Pull Request on GitHub"><!-- </meta> -->
+</div>
+
+<script type="application/json" data-scope="inboxmarkup">{"api_version":"1.0","publisher":{"api_key":"05dde50f1d1a384dd78767c55493e4bb","name":"GitHub"},"entity":{"external_key":"github/Homebrew/brew","title":"Homebrew/brew","subtitle":"GitHub repository","main_image_url":"https://cloud.githubusercontent.com/assets/143418/17495839/a5054eac-5d88-11e6-95fc-7290892c7bb5.png","avatar_image_url":"https://cloud.githubusercontent.com/assets/143418/15842166/7c72db34-2c0b-11e6-9aed-b52498112777.png","action":{"name":"Open in GitHub","url":"https://github.com/Homebrew/brew"}},"updates":{"snippets":[{"icon":"PERSON","message":"@GauthamGoli commented on #2242"}],"action":{"name":"View Pull Request","url":"https://github.com/Homebrew/brew/pull/2242#discussion_r106797769"}}}</script>

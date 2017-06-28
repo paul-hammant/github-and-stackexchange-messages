@@ -1,0 +1,32 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><p><strong>I'm submitting a ...</strong></p>
+<pre><code>[x ] bug report =&gt; search github for a similar issue or PR before submitting
+[ ] feature request
+[ ] support request =&gt; Please do not submit support request here, instead see https://github.com/angular/angular/blob/master/CONTRIBUTING.md#question
+</code></pre>
+<p><strong>Current behavior</strong><br>
+When using <code>runGuardsAndResolvers: 'paramsOrQueryParamsChange'</code> to make sure that a resolver is run whenever a query parameter changes, the resolver does runs, but the fetched data is not passed onto the subscription to the <code>route.data</code> Observable within the component.</p>
+<p><strong>Expected behavior</strong><br>
+If I subscribe to <code>route.data</code> within the component, I would expect to get updates whenever new data is fetched, but I only get the initial data, no updates.</p>
+<p><strong>Please tell us about your environment:</strong><br>
+Ubuntu 16.04</p>
+<ul>
+<li>
+<p><strong>Angular version:</strong> 2.0.X<br>
+Angular 4.0.0-rc.5</p>
+</li>
+<li>
+<p><strong>Browser:</strong><br>
+Chrome 54</p>
+</li>
+</ul>
+
+<p style="font-size:small;-webkit-text-size-adjust:none;color:#666;">—<br>You are receiving this because you are subscribed to this thread.<br>Reply to this email directly, <a href="https://github.com/angular/angular/issues/15290">view it on GitHub</a>, or <a href="https://github.com/notifications/unsubscribe-auth/AZR1R0h8y3q8J_VOvrFtDy_Jk2WinYMcks5rnbgugaJpZM4Mh6zU">mute the thread</a>.<img alt="" height="1" src="https://github.com/notifications/beacon/AZR1RxS7LM4PsZqYg2ch8b_z2CGqVpXyks5rnbgugaJpZM4Mh6zU.gif" width="1"></p>
+<div itemscope="" itemtype="http://schema.org/EmailMessage">
+<div itemprop="action" itemscope="" itemtype="http://schema.org/ViewAction">
+  <link itemprop="url" href="https://github.com/angular/angular/issues/15290"><!-- </link> -->
+  <meta itemprop="name" content="View Issue"><!-- </meta> -->
+</div>
+<meta itemprop="description" content="View this Issue on GitHub"><!-- </meta> -->
+</div>
+
+<script type="application/json" data-scope="inboxmarkup">{"api_version":"1.0","publisher":{"api_key":"05dde50f1d1a384dd78767c55493e4bb","name":"GitHub"},"entity":{"external_key":"github/angular/angular","title":"angular/angular","subtitle":"GitHub repository","main_image_url":"https://cloud.githubusercontent.com/assets/143418/17495839/a5054eac-5d88-11e6-95fc-7290892c7bb5.png","avatar_image_url":"https://cloud.githubusercontent.com/assets/143418/15842166/7c72db34-2c0b-11e6-9aed-b52498112777.png","action":{"name":"Open in GitHub","url":"https://github.com/angular/angular"}},"updates":{"snippets":[{"icon":"DESCRIPTION","message":"runGuardsAndResolvers: 'paramsOrQueryParamsChange': resolve on query param change works but data does not seems to be passed to subscribed Observable. (#15290)"}],"action":{"name":"View Issue","url":"https://github.com/angular/angular/issues/15290"}}}</script>
